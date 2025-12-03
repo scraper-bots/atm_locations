@@ -22,9 +22,16 @@ import math
 
 
 # Set style for professional-looking charts
-plt.style.use('seaborn-v0_8-darkgrid')
+plt.style.use('seaborn-v0_8-whitegrid')
 plt.rcParams['figure.figsize'] = (14, 8)
-plt.rcParams['font.size'] = 10
+plt.rcParams['font.size'] = 11
+plt.rcParams['font.family'] = 'sans-serif'
+plt.rcParams['axes.labelsize'] = 12
+plt.rcParams['axes.titlesize'] = 14
+plt.rcParams['xtick.labelsize'] = 10
+plt.rcParams['ytick.labelsize'] = 10
+plt.rcParams['legend.fontsize'] = 10
+plt.rcParams['figure.titlesize'] = 16
 
 
 def read_combined_data() -> List[Dict[str, str]]:
@@ -101,10 +108,9 @@ def chart1_bank_atm_comparison(data: List[Dict]) -> None:
         ax.text(width + 20, bar.get_y() + bar.get_height()/2,
                 f'{count}', ha='left', va='center', fontweight='bold', fontsize=11)
 
-    ax.set_xlabel('Number of ATMs', fontsize=12, fontweight='bold')
-    ax.set_title('Bank ATM Coverage Comparison in Azerbaijan\nBank of Baku vs Competitors',
-                 fontsize=14, fontweight='bold', pad=20)
-    ax.grid(axis='x', alpha=0.3)
+    ax.set_xlabel('Number of ATMs', fontsize=13, fontweight='bold')
+    ax.set_title('Bank ATM Coverage Comparison', fontsize=15, fontweight='bold', pad=15)
+    ax.grid(axis='x', alpha=0.2, linestyle='--')
 
     plt.tight_layout()
     plt.savefig('charts/1_bank_atm_comparison.png', dpi=300, bbox_inches='tight')
@@ -149,12 +155,11 @@ def chart2_geographic_distribution(data: List[Dict]) -> None:
                   label=f'Bank of Baku ATMs ({len(bob_coords)})',
                   edgecolors='darkred', linewidths=2, marker='D')
 
-    ax.set_xlabel('Longitude', fontsize=12, fontweight='bold')
-    ax.set_ylabel('Latitude', fontsize=12, fontweight='bold')
-    ax.set_title('Geographic Distribution: Bank of Baku vs Competitors\nRed Diamonds = BOB ATMs | Teal Dots = Competitor ATMs',
-                 fontsize=14, fontweight='bold', pad=20)
-    ax.legend(loc='upper right', fontsize=11, framealpha=0.9)
-    ax.grid(True, alpha=0.3)
+    ax.set_xlabel('Longitude', fontsize=13, fontweight='bold')
+    ax.set_ylabel('Latitude', fontsize=13, fontweight='bold')
+    ax.set_title('Geographic Distribution Map', fontsize=15, fontweight='bold', pad=15)
+    ax.legend(loc='best', fontsize=10, framealpha=0.95, edgecolor='black')
+    ax.grid(True, alpha=0.2, linestyle=':')
 
     plt.tight_layout()
     plt.savefig('charts/2_geographic_distribution.png', dpi=300, bbox_inches='tight')
@@ -197,12 +202,12 @@ def chart3_competitor_density_heatmap(data: List[Dict]) -> None:
         ax.scatter(bob_lons, bob_lats, c='blue', s=200, alpha=1,
                   label='Bank of Baku ATMs', edgecolors='white', linewidths=2, marker='*')
 
-    plt.colorbar(im, ax=ax, label='Competitor ATM Density')
-    ax.set_xlabel('Longitude', fontsize=12, fontweight='bold')
-    ax.set_ylabel('Latitude', fontsize=12, fontweight='bold')
-    ax.set_title('Competitor ATM Density Heatmap\nRed = High Density | Yellow = Low Density | Blue Stars = BOB ATMs',
-                 fontsize=14, fontweight='bold', pad=20)
-    ax.legend(loc='upper right', fontsize=11)
+    cbar = plt.colorbar(im, ax=ax, label='ATM Density')
+    cbar.ax.tick_params(labelsize=10)
+    ax.set_xlabel('Longitude', fontsize=13, fontweight='bold')
+    ax.set_ylabel('Latitude', fontsize=13, fontweight='bold')
+    ax.set_title('Competitor Density Heatmap', fontsize=15, fontweight='bold', pad=15)
+    ax.legend(loc='best', fontsize=10, framealpha=0.95, edgecolor='black')
 
     plt.tight_layout()
     plt.savefig('charts/3_competitor_density_heatmap.png', dpi=300, bbox_inches='tight')
@@ -259,12 +264,11 @@ def chart4_retail_opportunity_map(data: List[Dict]) -> None:
                   label=f'Bank of Baku ATMs ({len(bob_atms)})',
                   edgecolors='white', linewidths=3, marker='*', zorder=5)
 
-    ax.set_xlabel('Longitude', fontsize=12, fontweight='bold')
-    ax.set_ylabel('Latitude', fontsize=12, fontweight='bold')
-    ax.set_title('SUPERMARKET & RETAIL CHAIN Locations: High Foot Traffic Opportunities\nBlue Stars = Bank of Baku ATMs | Colored Dots = Supermarket/Grocery Stores',
-                 fontsize=14, fontweight='bold', pad=20)
-    ax.legend(loc='upper right', fontsize=10, framealpha=0.9)
-    ax.grid(True, alpha=0.3)
+    ax.set_xlabel('Longitude', fontsize=13, fontweight='bold')
+    ax.set_ylabel('Latitude', fontsize=13, fontweight='bold')
+    ax.set_title('Supermarket Partnership Opportunities', fontsize=15, fontweight='bold', pad=15)
+    ax.legend(loc='best', fontsize=10, framealpha=0.95, edgecolor='black', ncol=2)
+    ax.grid(True, alpha=0.2, linestyle=':')
 
     plt.tight_layout()
     plt.savefig('charts/4_retail_opportunity_map.png', dpi=300, bbox_inches='tight')
@@ -335,12 +339,13 @@ def chart5_coverage_gap_analysis(data: List[Dict]) -> None:
                   label=f'Bank of Baku ATMs ({len(bob_atms)})',
                   edgecolors='white', linewidths=3, marker='*', zorder=5)
 
-    ax.set_xlabel('Longitude', fontsize=12, fontweight='bold')
-    ax.set_ylabel('Latitude', fontsize=12, fontweight='bold')
-    ax.set_title(f'Coverage Gap Analysis: Areas >{threshold_km}km from BOB ATMs\nRed = Competitor ATMs with No BOB Presence',
-                 fontsize=14, fontweight='bold', pad=20)
-    ax.legend(loc='upper right', fontsize=10)
-    ax.grid(True, alpha=0.3)
+    cbar = plt.colorbar(scatter, ax=ax, label='Distance (km)')
+    cbar.ax.tick_params(labelsize=10)
+    ax.set_xlabel('Longitude', fontsize=13, fontweight='bold')
+    ax.set_ylabel('Latitude', fontsize=13, fontweight='bold')
+    ax.set_title(f'Coverage Gaps (>{threshold_km}km from BOB)', fontsize=15, fontweight='bold', pad=15)
+    ax.legend(loc='best', fontsize=9, framealpha=0.95, edgecolor='black')
+    ax.grid(True, alpha=0.2, linestyle=':')
 
     plt.tight_layout()
     plt.savefig('charts/5_coverage_gap_analysis.png', dpi=300, bbox_inches='tight')
@@ -422,10 +427,10 @@ def chart6_market_share_by_region(data: List[Dict]) -> None:
             ax.text(width + 1, bar.get_y() + bar.get_height()/2,
                    f'{count}', ha='left', va='center', fontweight='bold', fontsize=9)
 
-        ax.set_title(f'{quad_name} Region\nTotal ATMs: {total} | BOB: {bob_count} ({bob_count/total*100:.1f}%)',
-                    fontsize=11, fontweight='bold')
-        ax.set_xlabel('ATM Count', fontsize=9)
-        ax.grid(axis='x', alpha=0.3)
+        ax.set_title(f'{quad_name}\n{total} ATMs | BOB: {bob_count} ({bob_count/total*100:.1f}%)',
+                    fontsize=12, fontweight='bold')
+        ax.set_xlabel('ATMs', fontsize=11)
+        ax.grid(axis='x', alpha=0.2, linestyle='--')
 
     plt.tight_layout()
     plt.savefig('charts/6_market_share_by_region.png', dpi=300, bbox_inches='tight')
@@ -506,18 +511,17 @@ def chart7_nearest_retail_opportunities(data: List[Dict]) -> None:
         ax.text(width + 0.5, bar.get_y() + bar.get_height()/2,
                f'{dist:.1f} km', ha='left', va='center', fontweight='bold', fontsize=9)
 
-    ax.set_xlabel('Distance to Nearest Bank of Baku ATM (km)', fontsize=12, fontweight='bold')
-    ax.set_title('Top 20 Supermarket Partnership Opportunities for New ATMs\nRetail Locations Furthest from Current Bank of Baku Coverage',
-                fontsize=14, fontweight='bold', pad=20)
-    ax.grid(axis='x', alpha=0.3)
+    ax.set_xlabel('Distance to Nearest BOB ATM (km)', fontsize=13, fontweight='bold')
+    ax.set_title('Top 20 Retail Partnership Opportunities', fontsize=15, fontweight='bold', pad=15)
+    ax.grid(axis='x', alpha=0.2, linestyle='--')
 
     # Add legend - NO "bank" references
     patches = [
         mpatches.Patch(color='#E71D36', label='OBA Supermarket'),
         mpatches.Patch(color='#FF9F1C', label='Bazarstore'),
-        mpatches.Patch(color='#2EC4B6', label='Bravo Supermarket')
+        mpatches.Patch(color='#2EC4B6', label='Bravo')
     ]
-    ax.legend(handles=patches, loc='lower right', fontsize=10)
+    ax.legend(handles=patches, loc='lower right', fontsize=10, framealpha=0.95, edgecolor='black')
 
     plt.tight_layout()
     plt.savefig('charts/7_nearest_retail_opportunities.png', dpi=300, bbox_inches='tight')
