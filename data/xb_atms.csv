@@ -1,0 +1,134 @@
+id,title,slug,address,phone,working_hours,lat,lon
+400,ATM Azpetrol Zəngilan,atm-azpetrol-zengilan,Zəngilan rayonu Ağalı Ə/V ev.5,138,24/7,39.180283,46.763699
+401,ATM Azpetrol Bərdə,atm-azpetrol-berde,"Bərdə şəh., Bakı küç., ev 2",138,24/7,40.375751,47.134651
+402,ATM İçəri Şəhər,atm-iceri-seher,"Bakı şəh., A.Zeynallı küç., 24",138,24/7,40.365620,49.835648
+403,ATM Azpetrol Masallı,atm-azpetrol-masalli,"Masallı r-nu, Bakı-Astara şossesi",138,24/7,39.034184,48.684643
+404,ATM Azpetrol Sabirabad,atm-azpetrol-sabirabad,"Sabirabad r-nu, Qalağayn kəndi",138,24/7,39.976891,48.454750
+405,ATM Azpetrol Ələt,atm-azpetrol-elet,"Bakı şəhəri, Qaradağ rayonu, 66-cı km",138,24/7,40.296688,49.755451
+406,ATM Azpetrol Qəbələ,atm-azpetrol-qebele,"Qəbələ rayonu, Qəbələ şəhəri, İ.Qutqaşınlı küç.",138,24/7,40.965103,47.835361
+407,ATM Azpetrol Oğuz,atm-azpetrol-oguz,"Oğuz rayonu, Calud kəndi",138,24/7,41.052547,47.423134
+408,ATM Azpetrol Ucar,atm-azpetrol-ucar,"Ucar rayonu, Bakı-Gəncə şossesi",138,24/7,40.494732,47.660625
+409,ATM Azpetrol Ağsu,atm-azpetrol-agsu,"Ağsu rayonu, Bakı-Şamaxı yolunun Cənub tərəfi",138,24/7,40.580265,48.383495
+410,ATM Azpetrol Balakən,atm-azpetrol-balaken,"Balakən şəhəri, H.Əliyev pr.",138,24/7,41.703049,46.428219
+411,ATM Azpetrol Qax,atm-azpetrol-qax,"Qax rayonu, H.Əliyev pr.",138,24/7,41.416592,46.903564
+412,ATM Azpetrol Sumqayıt,atm-azpetrol-sumqayit,"Sumqayıt şəhəri, Bakı-Quba yolu, 30-cu km",138,24/7,40.567715,49.631950
+413,ATM Azpetrol Masazır,atm-azpetrol-masazir,"Bakı şəh., Abşeron r-nu, Saray qəs.",138,24/7,40.511688,49.753277
+414,ATM Azpetrol H.Əliyev pr. 108 (NİİM),atm-azpetrol-heliyev-pr-108-niim,"Bakı şəh., Nizami r-nu, Heydər Əliyev pr., 108 D",138,24/7,40.418270,49.912281
+415,ATM Azpetrol Mayak,atm-azpetrol-mayak,"Bakı şəh., Qaradağ rayonu, Puta mayakının Şimal-Qərb hissəsi",138,24/7,40.286095,49.733261
+416,ATM Azpetrol Mərdəkan,atm-azpetrol-merdekan,"Bakı şəh., Xəzər rayonu, Qala ŞTQ Aeroport-Mərdəkan yolunun sağ tərəfi",138,24/7,40.487297,50.159813
+417,ATM Azpetrol Gəncə,atm-azpetrol-gence,"Gəncə şəhəri, Kəpəz ray., Xətai pr. ilə Tağı Aranı küç. kəsişməsi",138,24/7,40.681358,46.367893
+418,ATM Azpetrol Babək pr.,atm-azpetrol-babek-pr,"Bakı şəh., Babək pr., 27/76-77",138,24/7,40.391445,49.909363
+419,ATM Elit Ticarət Mərkəzi,atm-elit-ticaret-merkezi,"Bakı şəh., Ə.Rəcəbli, 269",138,24/7,40.420540,49.854858
+420,ATM Azpetrol Salyan,atm-azpetrol-salyan,"Salyan r-nu, Bakı-Astara yolu, 134-cü km",138,24/7,39.579185,48.968792
+422,ATM Avtolux,atm-avtolux,"Bakı şəh., Üzeyir Hacıbəyli küç., 57",138,24/7,40.377926,49.858463
+424,ATM Bakı MTK,atm-baki-mtk,"Bakı şəh., Ə.Əliyev, 128",138,24/7,40.410137,49.873047
+425,ATM Xətai pr.,atm-xetai-pr,"Bakı şəh., Ə.Ağaoğlu küç., 1 / Xətai pr., 35",138,24/7,40.390034,49.860191
+426,ATM  Azpetrol Beyləqan,atm-azpetrol-beyleqan,"Beyləqan r-nu, Beyləqan-Daşburun avtomobil yolunun sol tərəfi",138,24/7,39.755821,47.605984
+427,ATM Albalı,atm-albali,"Bakı şəh., Vişnyovka qəs., Zavod küç",138,24/7,40.516109,50.116398
+428,ATM Azpetrol Şıxov,atm-azpetrol-sixov,"Bakı şəh., Şıx qəs.",138,24/7,40.296883,49.755505
+429,ATM Azərfon,atm-azerfon,"Bakı şəh., H. Əliyev pr., 106",138,24/7,40.416744,49.909363
+430,ATM Azpetrol Ağdaş,atm-azpetrol-agdas,"Ağdaş rayonu, Məşəd kəndi",138,24/7,40.641415,47.492371
+431,ATM  Azpetrol Cəngi,atm-azpetrol-cengi,"Qobustan r-nu, Cəngi YS Bakı-Şamaxı-Yevlax yolunun 57-ci km",138,24/7,40.502384,49.264191
+432,ATM Azpetrol Nobel pr.,atm-azpetrol-nobel-pr,"Bakı şəh., Çernışevski küç., 2273",138,24/7,40.382805,49.921715
+433,ATM Teleqüllə,atm-telequlle,"Bakı şəh., Teleqüllə, Akademik Abbaszadə küç., 2",138,12:00-00:00,40.351433,49.823414
+434,ATM World Business Center,atm-world-business-center,"Bakı şəh., S.Rəhimov küç., 309/53",138,24/7,40.378605,49.839928
+435,ATM Koala park,atm-koala-park,"Bakı şəh., Azadlıq pr., 95",138,24/7,40.391479,49.841145
+436,ATM Azpetrol Tbilisi pr.,atm-azpetrol-tbilisi-pr,"Bakı şəh., Tbilisi pr.",138,24/7,40.389156,49.826344
+437,ATM MQS MMC,atm-mqs-mmc,"Bakı şəh., Babək pr., 76",138,24/7,40.397758,49.932690
+438,ATM  Azpetrol İmişli,atm-azpetrol-imisli,"İmişli r-nu, Qaradonlu kəndi",138,24/7,39.788609,48.067410
+439,ATM  Azpetrol Biləsuvar,atm-azpetrol-bilesuvar,"Biləsuvar r-nu, H.Əliyev pr.",138,24/7,39.441265,48.547672
+440,ATM Azpetrol Xudat,atm-azpetrol-xudat,Xudat şəh.,138,24/7,41.606220,48.696011
+441,ATM Azpetrol Qələbə dairəsi,atm-azpetrol-qelebe-dairesi,"H.Zərdabi pr.593-cü məhəllə, Azpetrol YDM",138,24/7,40.388954,49.807907
+442,ATM Azpetrol Gənclik,atm-azpetrol-genclik,"Bakı şəh., Nərimanov rayonu, Vaqif küçəsi 881-884-cü məhəllə",138,24/7,40.399475,49.848469
+443,ATM Gəncə Şərab Zavodu,atm-gence-serab-zavodu,"Göygöl şəh., Heydər Əliyev pr., 2",138,24/7,40.595116,46.322037
+444,ATM Hilton Hotel Cash İn/Exchange,atm-hilton-hotel,"Bakı şəh., Azadlıq pr., 1B",138,24/7,40.372105,49.849678
+445,ATM Baku Bay Tower,atm-baku-bay-tower,"Bakı şəhəri, 8 Noyabr prospekti 113",138,24/7,40.380760,49.879795
+446,ATM Azəri Med,atm-azeri-med,"Bakı şəh, Əhməd Rəcəbli küç, 1/11",138,24/7,40.409416,49.862469
+447,ATM Azpetrol Bayıl,atm-azpetrol-bayil,"Bakı şəh, Səlyan şosesi, Azpetrol YDM",138,24/7,40.337524,49.828289
+449,ATM Siyəzən Broyler,atm-siyezen-broyler,"Siyəzən ray, Beşdam Kəndi",138,24/7,41.040970,49.158421
+450,ATM Park inn 1,atm-park-inn-1,"Bakı şəh., Rəşid Behbudov küç.",138,24/7,40.371597,49.848629
+452,ATM SOCAR AGS Sahil,atm-socar-ags-sahil,"Bakı şəh., Sahil qəs, Yükyanalma limanı",138,24/7,40.214733,49.568562
+455,"ATM ""Neftçilər"" filialı 1",atm-neftciler-filiali-1,"Bakı şəh., Qara Qarayev pr., 70B",+994 12 5201468,24/7,40.410671,49.942631
+459,"ATM ""Yubiley"" filialı",atm-yubiley-filiali,"Bakı şəh., Akad. H.Əliyev, 24",+994 12 4044340,24/7,40.398659,49.833404
+462,"ATM ""Gəncə"" filialı",atm-gence-filiali,"Gəncə şəh., Zərrabi küç., 4",+994 22 2662483,24/7,40.675846,46.358421
+463,"ATM ""Zaqatala"" filialı",atm-zaqatala-filiali,"Zaqatala şəh., Nizami küç., 1",+994 24 2256679,24/7,41.632965,46.651352
+464,"ATM ""Neftçala"" filialı",atm-neftcala-filiali,"Neftçala şəh., 20 Yanvar küç., 18A",+994 21 263 30 58,24/7,39.377796,49.245377
+465,"ATM ""Mingəçevir"" filialı",atm-mingecevir-filiali,"Mingəçevir şəh., Mirzə Fətəli Axundov küç., 15/16A",+994 24 2742783,24/7,40.771534,47.046772
+466,"ATM ""Cəlilabad"" filialı",atm-celilabad-filiali,"Cəlilabad şəh., Heydər Əliyev pr., 142A",+994 25 2455605,24/7,39.210655,48.504318
+467,"ATM ""Yevlax"" filialı",atm-yevlax-filiali,"Yevlax şəh., Heydər Əliyev pr., 47A",+994 22 3361690,24/7,40.610424,47.147102
+468,"ATM ""Xaçmaz"" filialı",atm-xacmaz-filiali,"Xaçmaz şəh., Heydər Əliyev küç., 34B",+994 23 3255629,24/7,41.463463,48.806805
+469,"ATM ""Şabran"" filialı",atm-sabran-filiali,"Şabran şəh., Heydər Əliyev pr., 115 A",+99 42 33532417,24/7,41.209164,48.994358
+470,"ATM ""Qazax"" filialı",atm-qazax-filiali,"Qazax şəh., S. Arıxov küç.",+994 22 2955600,24/7,41.088779,45.354904
+471,"ATM ""İsmayıllı"" filialı",atm-ismayilli-filiali,"İsmayıllı şəh., H. Əliyev pr., 97",+994 20 2851493,24/7,40.791603,48.155460
+472,"ATM ""Quba"" filialı",atm-quba-filiali,"AZ 4000, 223-cü Atıcı diviziya küç., 21, Quba, Azərbaycan",+994 23 3353397,24/7,41.362530,48.524834
+473,"ATM ""Qusar"" filialı",atm-qusar-filiali,"AZ 3800, F.Musayev küç.,68, Qusar, Azərbaycan",+994 23 3852472,24/7,41.423927,48.426739
+474,"ATM ""Şamaxı"" filialı",atm-samaxi-filiali,"Şamaxı şəh., Şəhriyar küç., 1",+994 50 5696099,24/7,40.637798,48.636768
+475,"ATM ""Lənkəran"" filialı",atm-lenkeran-filiali,"Lənkəran şəh., Ş.Axundov küç., 20",+994 25 2553079,24/7,38.754158,48.855434
+476,"ATM ""Şəmkir"" filialı",atm-semkir-filiali,"Şəmkir şəh., Həzi Aslanov küç., 44",+994 22 3052303,24/7,40.833984,46.023399
+477,"ATM ""Şirvan"" filialı",atm-sirvan-filiali,"Şirvan şəh., Heydər Əliyev pr., 8",+994 21 2151615,24/7,39.954517,48.936035
+478,"ATM ""Siyəzən"" filialı",atm-siyezen-filiali,"Siyəzən şəh., Heydər Əliyev küç., 88 B",+994 23 3043215,24/7,41.070374,49.116631
+479,"ATM ""Tovuz"" filialı",atm-tovuz-filiali,"Tovuz şəh., Həzi Aslanov küç., 21",+994 22 3153316,24/7,40.988838,45.618156
+480,"ATM ""Göyçay"" filialı",atm-goycay-filiali,"Göyçay şəh., H.Əliyev pr., 60",+994 20 2746206,24/7,40.649593,47.746639
+481,ATM Azpetrol H.Əliyev pr. 106 (Koroğlu s.),atm-azpetrol-heliyev-pr-106-koroglu-s,"Bakı şəh., Nizami rayonu, H.Əliyev pr., 105",138,24/7,40.418270,49.912239
+482,ATM Azpetrol Binəqədi şossesi.,atm-azpetrol-bineqedi-sossesi,"Bakı şəh., Binəqədi rayonu, Binəqədi şossesinin şərq hissəsi",138,24/7,40.448730,49.843624
+483,ATM Azpetrol Azadlıq pr.,atm-azpetrol-azadliq-pr,"Bakı şəh., K.Marks pr. 3023-ci məhəllə ",138,24/7,40.410797,49.834328
+512,"ATM ""Şəki"" filialı",atm-seki-filiali,"Şəki şəh., Məmməd Əmin Rəsulzadə küç., 169A",+994 24 2440382,"09:30-13:00, 14:00-17:00",41.202698,47.177700
+514,"ATM ""Sahil"" filialı",atm-sahil-filiali,"Bakı şəh., Xaqani küç., 23",138,24/7,0.000000,0.000000
+515,"ATM ""Baş"" filial",atm-bas-filial,"Bakı şəh., İnşaatçılar pr., 22M",138,24/7,0.000000,0.000000
+520,ATM Azpetrol M.Əliyev küç.,atm-azpetrol-meliyev-kuc,"Bakı şəh., Nizami ray., M.Əliyev küç.,məhəllə 2405 (Bakı Porsche Mərkəzi)",138,24/7,40.412205,49.924137
+521,"ATM ""Baş ofis"" 3",atm-bas-ofis-3,"Bakı şəh., İnşaatçılar pr., 22L",138,09:30-17:00,40.376869,49.820225
+523,ATM Baku Medical Plaza 1,atm-baku-medical-plaza-1,"Bakı şəh,  Nəsimi r, M.Rəfili və R.Behbudov küç-nin kəsişdiyi 389 məhəllə",138,24/7,40.382236,49.843887
+527,ATM Azpetrol Şıxımlı,atm-azpetrol-siximli,"Kürdəmir rayonu, Şıxımlı kəndi",138,24/7,0.000000,0.000000
+528,ATM Azpetrol Borsunlu,atm-azpetrol-borsunlu,"Goranboy rayonu, Borsunlu kəndi",138,24/7,0.000000,0.000000
+529,ATM Azpetrol Günəşli,atm-azpetrol-gunesli,"Bakı şəh., Suraxanı r., Yeni Günəşli qəs.",138,24/7,0.000000,0.000000
+530,ATM Azpetrol Hökməli dairəsi,atm-azpetrol-hokmeli-dairesi,"Abşeron r. Xırdalan ş. Bakı-Şamaxı şossesi, Hökməli dairəsi",138,24/7,0.000000,0.000000
+531,ATM Səba Broyler Şabran,atm-seba-broyler-sabran,"Şabran şəh., M.Rəsulzadə küç 35",138,24/7,0.000000,0.000000
+532,ATM Gəncə Bazar Store,atm-gence-bazar-store,"Gəncə şəh.,Kəpəz r., Zərifə Əliyeva pr., 281",+994 22 2662483,24/7,0.000000,0.000000
+533,ATM Gəncə Əttarlar küç.,atm-gence-ettarlar-kuc,"Gəncə şəh., Əttarlar küç., 137",+994 22 2662483,24/7,0.000000,0.000000
+536,ATM Hayatt Regency Baku Hotel,atm-hayatt-regency-baku-hotel,"Bakı şəh., Yasamal ray., İzmir küç., 6",138,24/7,0.000000,0.000000
+537,ATM Baku Medical Plaza Babək,atm-baku-medical-plaza-babek,"Bakı şəh., Xətai ray., Babək pr.92,Baku city",138,24/7,0.000000,0.000000
+538,ATM Məlhəm Hospital,atm-melhem-hospital,"Bakı şəh., Nizami rayonu, C.Naxçıvanski küç. 433",138,24/7,0.000000,0.000000
+539,ATM Bravo 20 Yanvar,atm-bravo-20-yanvar,"Bakı şəh., Nəsimi r., Tbilisi pr. 3007",138,24/7,0.000000,0.000000
+540,ATM Gənclik Mall,atm-genclik-mall,"Bakı şəh., F.Xoyski küç.14",138,10:00-22:00,0.000000,0.000000
+541,ATM Zəfəran Hospital,atm-zeferan-hospital,"Bakı şəh., Asif Məmmədov küç.,30",138,24/7,0.000000,0.000000
+542,ATM Dəniz Mall,atm-deniz-mall,"Bakı şəhəri, Səbail rayonu,  Neftçilər pr. 108",138,10:00-22:00,0.000000,0.000000
+543,ATM Nərgiz Mall Cash-İn/Exchange,atm-nergiz-mall,"Bakı şəh, Səbail ray, Nizami küç.,60",138,10:00-22:00,0.000000,0.000000
+1479,ATM 28 Mall,atm-28-mall-1,"Bakı şəhəri, Azadlıq pr. 45, ""28"" Ticarət Mərkəzinin 3-cü mərtəbə",138,10:00-22:00,"40.37929949479549,",49.847280382115514
+1618,ATM AzTəsərrüfat,atm-azteserrufat-az,"Salyan rayonu, Qızılağac kəndi, Ələt-Astara yolunun 71-ci km",138,24/7,39.66451315488602,49.01598568451658
+1619,ATM Azpetrol Suqovuşan,atm-azpetrol-suqovusan-az,"Tərtər rayonu, Suqovuşan kəndi",138,24/7,40.327029,46.755695
+1620,ATM Doktor.az,atm-doktoraz-az,"Sumqayıt şəhəri, S.Bədəlbəyli küç., 43-cü məhəllə",138,24/7,40.571893232726,49.676574871042
+1621,ATM Azpetrol Hadrut,atm-28-mall-1-1621,"Xocavənd rayonu, Hadrut qəsəbəsi",138,10:00-22:00,39.511634551041,47.048894107468
+1622,ATM Delta Group,atm-delta-group-az,"Sumqayıt şəhəri, Sülh küçəsi, 76-cı məhəllə, 10D",138,24/7,40.58599495306416,49.66785482871254
+1623,ATM Milla Zavodu,atm-milla-zavodu-az,"Abşeron rayonu, Hökməli qəs., Bakı-Şamaxı avtomobil yolunun 15-ci km",138,24/7,40.41335114816835,49.86074344220306
+1646,ATM Xırdalan,atm-xirdalan-az,"Abşeron rayonu, Xırdalan şəhəri, Qalubiyyə küçəsi 3/14",138,24/7,40.454481721671456,49.74504422959455
+1754,ATM Azpetrol Füzuli,atm-azpetrol-fuzuli-az,"Füzuli ray.,Mərdinli kəndi,Zəfər yolu üstü",138,24/7,39.599759,47.260306
+1825,ATM Mars Overseas,atm-mars-overseas-baku-ltd-az,"Bakı şəh. Binəqədi ray., Sulutəpə qəs., (“Mars Overseas Baku LTD”, Pepsi anbarı)",138,24/7,40.431793,49.780893
+1844,ATM Leyla Medical Center,atm-leyla-medical-center-az,"Bakı şəhəri, Xətai rayonu, Yusif Səfərov küçəsi 19",138,24/7,40.382134,49.863357
+1980,ATM MetroPark Cash-in/Exchange,atm-metropark-az,"Bakı şəhəri, N.Nərimanov rayonu, Təbriz küçəsi 106A",138,10:00 - 22:00,"40.403370231307925,",49.87280205328994
+1981,ATM Azpetrol Qusar Cash-in/Exchange,atm-azpetrol-qusar-az,"Qusar rayonu, Samur ŞTQ",138,24/7,"41.43974726467129,",48.17407485167173
+2001,ATM Şuşa Azpetrol,atm-susa-azpetrol-az,Şuşa rayonu Azərbaycan ev. 3 km,138,24/7,"39.753738,",46.746471
+2015,ATM Azpetrol Ağcabədi,atm-azpetrol-agcabedi-az,"Ağcabədi şəhəri, M.Ə. Rəsulzadə küçəsi 201A",138,24/7,40.06913,47.47612
+2016,ATM Crescent Mall Cash-in/Exchange,atm-crescent-mall-az,"Bakı şəhəri, Nəsimi rayonu, Neftçilər prospekti, ""Aypara Sarayı və Şəhərciyi"" 66, 68",138,10:00-22:00,40.373931,49.858914
+2087,ATM Bakıkhanov Mall,atm-bakikhanov-mall-az,"Bakı şəhəri, Sabunçu rayonu, Bakıxanov qəsəbəsi, Yavər Əliyev küçəsi, 132",138,10:00-22:00,40.43655001877324,49.95916182751169
+2088,ATM Saloğlu,atm-saloglu-az,"Qazax rayonu, Ağköynək kəndi",138,09:00-19:00,41.27431056981082,45.35295225383711
+2089,ATM Mediland,atm-mediland-az,"Bakı şəhəri, Xətai rayonu, Sabit Orucov küçəsi, 17C",138,24/7,40.38072057605698,49.86991246453777
+2090,ATM Park Bulvar,atm-park-bulvar-az,"Bakı şəhəri, Səbail rayonu, Neftçilər prospekti 42",138,10:00-22:00,40.370797589094096,49.84967793979835
+2091,ATM Sea Breeze,atm-sea-breeze-az,"Bakı şəhəri, Sabunçu rayonu, Nardaran qəsəbəsi, Nardaran Ləhiş yolu",138,24/7,40.591362743562755,49.98527169144138
+2092,ATM Azpetrol Ağcabədi,azpetrol-agcabedi-az,"Ağcabədi şəhəri, M.Ə. Rəsulzadə küçəsi 201A",138,24/7,40.069283748156245,47.47600199838563
+2124,ATM Zagulba Mall,atm-zagulba-mall-az,"Bakı şəhəri, Xəzər rayonu, Buzovna qəsəbəsi, Zağulba prospekti, giriş 116",138,24/7,40.527271259333745,50.09800461656223
+2223,ATM Retro Holding,atm-retro-holding-az,"Bakı şəhəri, Xəzər rayonu, Buzovna qəsəbəsi, M.Ə.Sabir küç",138,24/7,"40.5176798017881,",50.070977043757644
+2224,ATM Finans Kredit BOKT,atm-finans-kredit-bokt-az,"Bakı şəhəri, Səbail rayonu, Badamdar qəsəbəsi, massiv 1, ev 262-A",138,24/7,"40.34719149809631,",49.810396110538896
+2225,ATM Wyndham Garden Baku,atm-zagulba-mall-az-2225,"Bakı şəhəri, Xəzər rayonu, Buzovna qəsəbəsi, Zağulba prospekti, giriş 116",138,24/7,"40.41305791092876,",49.923582862368725
+2226,ATM Aygun Mall,atm-aygun-mall-az,"Bakı şəh., Sabunçu rayonu, Sakit Qocayev küçəsi 29",138,24/7,"40.41765834302952,",49.96500375577285
+2227,ATM Megafun,atm-megafun-az,"Bakı şəh., 8 Noyabr pr., 15",138,10:00 -19:00,40.527271259333745,50.09800461656223
+2273,"ATM Bolmart (Avrora"" MMC)",atm-bolmart-avrora-mmc-az,"Bakı şəhəri, Aşıq Molla Cümə küçəsi, 46C (“Avrora” MMC-nin yaxınlığı)",138,10:00 -21:00,"40.41088487632756,",49.85757762622085
+2321,ATM Bolmart (9 MKR),atm-bolmart-9-mkr-az,"Bakı şəhəri, Binəqədi rayonu, 9-cu MKR, Mir Cəlal küçəsi 72",138,24/7,40.42126090346249,49.81490608055408
+2322,ATM MegaStore (H.Aslanov m/s),atm-megastore-haslanov-ms-az,"Bakı şəhəri,  Xətai rayonu,  Xudu Məmmədov küçəsi 43C",138,24/7,40.372765354053925,49.944648924109515
+2354,ATM Elektroterm (Cash-in),atm-elektroterm-az,"Bakı şəhəri, N.Nərimanov rayonu, Ələsgər Qayıbov 12/22",138,24/7,40.42173085185313,49.877247308489125
+2355,ATM Xidir restoranı (Qusar rayonu),atm-xidir-restorani-qusar-rayonu-az,"Qusar şəhəri, H.Əliyev prospekti 205",138,24/7,41.41078493954653,48.40156758015389
+2366,ATM Azur Biznes mərkəzi Cash-in/Exchange,atm-azur-biznes-merkezi-cash-in-2366,"Bakı şəh, 8 noyabr pr. 15",138,10:00-22:00,0.000000,0.000000
+2372,ATM MetroPark Cash-in/Exchange,atm-metropark-az-2372,"Bakı şəhəri, N.Nərimanov rayonu, Təbriz küçəsi 106A",138,10:00 - 22:00,"40.403370231307925,",49.87280205328994
+2373,ATM Elektroterm (Cash-in),atm-elektroterm-az-2373,"Bakı şəhəri, N.Nərimanov rayonu, Ələsgər Qayıbov 12/22",138,24/7,40.42173085185313,49.877247308489125
+2384,ATM Landau School (Bayıl korpusu),atm-landau-school-bayil-korpusu-az,"Səbail rayonu, Bayıl qəsəbəsi, Gülbala Əliyev küçəsi, 9",138,24/7,40.340294157223525,49.83252270480035
+2407,ATM Azpetrol Qusar Cash-in/Exchange,atm-azpetrol-qusar-az-2407,"Qusar rayonu, Samur ŞTQ",138,24/7,"41.43974726467129,",48.17407485167173
+2410,ATM Atrium İdman və Əyləncə Mərkəzi,atm-atrium-idman-ve-eylence-merkezi-az,"S.S.Axundov küçəsi, 82, Atrium İdman və Əyləncə Mərkəzi",138,24/7,40.425440,49.844202
