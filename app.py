@@ -1230,9 +1230,12 @@ else:  # ROI Rankings page
                 top_locations_copy['roi_score'],
                 bins=[0, 50, 70, 90, 100],
                 labels=['Low', 'Fair', 'Good', 'Excellent']
-            )
+            ).astype(str)
 
-            category_counts = top_locations_copy['Category'].value_counts().sort_index(ascending=False)
+            category_counts = top_locations_copy['Category'].value_counts()
+            # Manual sort for proper order
+            category_order = ['Excellent', 'Good', 'Fair', 'Low']
+            category_counts = category_counts.reindex([c for c in category_order if c in category_counts.index])
 
             fig = px.bar(
                 x=category_counts.values,
