@@ -327,24 +327,29 @@ def chart5_coverage_gap_analysis(data: List[Dict]) -> None:
         gap_lons = [g['lon'] for g in gaps]
         distances = [g['distance_to_bob'] for g in gaps]
 
-        scatter = ax.scatter(gap_lons, gap_lats, c=distances, s=80, alpha=0.8,
-                           cmap='Reds', edgecolors='darkred', linewidths=1,
+        scatter = ax.scatter(gap_lons, gap_lats, c=distances, s=40, alpha=0.6,
+                           cmap='Reds', edgecolors='none',
                            label=f'Coverage Gaps ({len(gaps)})', vmin=threshold_km, vmax=max(distances))
-        plt.colorbar(scatter, ax=ax, label='Distance to Nearest BOB ATM (km)')
+        cbar = plt.colorbar(scatter, ax=ax, label='Distance (km)', pad=0.02)
+        cbar.ax.tick_params(labelsize=9)
 
     # Plot BOB ATMs
     if bob_atms:
         bob_lats, bob_lons = zip(*bob_atms)
-        ax.scatter(bob_lons, bob_lats, c='blue', s=250, alpha=1,
-                  label=f'Bank of Baku ATMs ({len(bob_atms)})',
-                  edgecolors='white', linewidths=3, marker='*', zorder=5)
+        ax.scatter(bob_lons, bob_lats, c='#0066CC', s=200, alpha=1,
+                  label=f'BOB ATMs ({len(bob_atms)})',
+                  edgecolors='white', linewidths=2, marker='*', zorder=5)
 
-    cbar = plt.colorbar(scatter, ax=ax, label='Distance (km)')
-    cbar.ax.tick_params(labelsize=10)
-    ax.set_xlabel('Longitude', fontsize=13, fontweight='bold')
-    ax.set_ylabel('Latitude', fontsize=13, fontweight='bold')
-    ax.set_title(f'Coverage Gaps (>{threshold_km}km from BOB)', fontsize=15, fontweight='bold', pad=15)
-    ax.legend(loc='best', fontsize=9, framealpha=0.95, edgecolor='black')
+    # Plot competitor ATMs for context
+    comp_lats_sample = [safe_float(loc['latitude']) for loc in competitor_atms[:200]]
+    comp_lons_sample = [safe_float(loc['longitude']) for loc in competitor_atms[:200]]
+    ax.scatter(comp_lons_sample, comp_lats_sample, c='lightgray', s=10, alpha=0.3,
+              label=f'Competitors (sample)', zorder=1)
+
+    ax.set_xlabel('Longitude', fontsize=12, fontweight='bold')
+    ax.set_ylabel('Latitude', fontsize=12, fontweight='bold')
+    ax.set_title(f'Coverage Gaps (>{threshold_km}km from BOB)', fontsize=14, fontweight='bold', pad=12)
+    ax.legend(loc='upper left', fontsize=9, framealpha=0.95, edgecolor='gray', ncol=3)
     ax.grid(True, alpha=0.2, linestyle=':')
 
     plt.tight_layout()
@@ -842,31 +847,38 @@ def chart10_market_penetration_efficiency(data: List[Dict]) -> None:
         }
 
     # Create visualization
-    fig, ax = plt.subplots(figsize=(14, 10))
+    fig, ax = plt.subplots(figsize=(16, 10))
 
     banks = list(bank_metrics.keys())
     counts = [bank_metrics[b]['count'] for b in banks]
     spacings = [bank_metrics[b]['avg_spacing'] for b in banks]
 
-    # Size represents coverage score
-    sizes = [bank_metrics[b]['coverage_score'] * 20 for b in banks]
+    # Size represents coverage score - scaled better
+    sizes = [bank_metrics[b]['coverage_score'] * 30 for b in banks]
 
     # Color BOB differently
     colors = ['#FF6B6B' if b == 'Bank of Baku' else '#4ECDC4' for b in banks]
 
-    scatter = ax.scatter(counts, spacings, s=sizes, c=colors, alpha=0.7,
-                        edgecolors='black', linewidths=2)
+    scatter = ax.scatter(counts, spacings, s=sizes, c=colors, alpha=0.6,
+                        edgecolors='black', linewidths=1.5)
 
-    # Add bank labels
-    for bank, count, spacing in zip(banks, counts, spacings):
+    # Add bank labels with better positioning
+    for bank, count, spacing, size in zip(banks, counts, spacings, sizes):
         label = 'BOB' if bank == 'Bank of Baku' else bank.replace('Bank', '').replace('Respublika', 'Resp').strip()[:8]
-        ax.annotate(label, (count, spacing), fontsize=9, fontweight='bold',
-                   ha='center', va='center')
+        # Offset label slightly above the bubble
+        offset = 0.3 if size > 200 else 0.15
+        ax.annotate(label, (count, spacing + offset), fontsize=10, fontweight='bold',
+                   ha='center', va='bottom')
 
     ax.set_xlabel('Total ATMs', fontsize=13, fontweight='bold')
-    ax.set_ylabel('Avg Spacing (km)', fontsize=13, fontweight='bold')
+    ax.set_ylabel('Avg Spacing Between ATMs (km)', fontsize=13, fontweight='bold')
     ax.set_title('Market Penetration Efficiency', fontsize=15, fontweight='bold', pad=15)
     ax.grid(True, alpha=0.2, linestyle=':')
+
+    # Add subtle note about bubble size
+    ax.text(0.98, 0.02, 'Bubble size = Coverage efficiency',
+           transform=ax.transAxes, fontsize=9, ha='right', va='bottom',
+           bbox=dict(boxstyle='round,pad=0.5', facecolor='white', alpha=0.8, edgecolor='gray'))
 
     plt.tight_layout()
     plt.savefig('charts/10_market_penetration_efficiency.png', dpi=300, bbox_inches='tight')
@@ -1005,35 +1017,38 @@ def chart12_expansion_roi_ranking(data: List[Dict]) -> None:
     scored_opportunities.sort(key=lambda x: x['score'], reverse=True)
     top_30 = scored_opportunities[:30]
 
-    fig, ax = plt.subplots(figsize=(14, 12))
+    fig, ax = plt.subplots(figsize=(16, 14))
 
     locations = [f"{i+1}. {opp['location']}" for i, opp in enumerate(top_30)]
     scores = [opp['score'] for opp in top_30]
 
     colors = ['#2ECC71' if s >= 70 else '#F39C12' if s >= 50 else '#E74C3C' for s in scores]
 
-    bars = ax.barh(range(len(locations)), scores, color=colors, edgecolor='black', linewidth=1)
+    bars = ax.barh(range(len(locations)), scores, color=colors, edgecolor='black', linewidth=0.8, height=0.7)
     ax.set_yticks(range(len(locations)))
-    ax.set_yticklabels(locations, fontsize=8)
+    ax.set_yticklabels(locations, fontsize=9)
 
     # Add score labels
     for i, (bar, score, opp) in enumerate(zip(bars, scores, top_30)):
         width = bar.get_width()
         ax.text(width + 1, bar.get_y() + bar.get_height()/2,
-               f'{score:.0f}', ha='left', va='center', fontweight='bold', fontsize=8)
+               f'{score:.0f}', ha='left', va='center', fontweight='bold', fontsize=9)
 
     ax.set_xlabel('ROI Score', fontsize=13, fontweight='bold')
     ax.set_title('Top 30 Expansion Locations (ROI Ranked)', fontsize=15, fontweight='bold', pad=15)
+    ax.set_xlim(0, max(scores) + 10)
     ax.grid(axis='x', alpha=0.2, linestyle='--')
+    ax.invert_yaxis()
 
-    # Legend
+    # Legend - top right, outside plot
     from matplotlib.patches import Patch
     legend_elements = [
-        Patch(facecolor='#2ECC71', label='Excellent (70+)'),
-        Patch(facecolor='#F39C12', label='Good (50-69)'),
-        Patch(facecolor='#E74C3C', label='Fair (<50)')
+        Patch(facecolor='#2ECC71', label='Excellent (70+)', edgecolor='black'),
+        Patch(facecolor='#F39C12', label='Good (50-69)', edgecolor='black'),
+        Patch(facecolor='#E74C3C', label='Fair (<50)', edgecolor='black')
     ]
-    ax.legend(handles=legend_elements, loc='lower right', fontsize=10, framealpha=0.95, edgecolor='black')
+    ax.legend(handles=legend_elements, loc='upper right', fontsize=10, framealpha=0.98,
+             edgecolor='black', fancybox=False)
 
     plt.tight_layout()
     plt.savefig('charts/12_expansion_roi_ranking.png', dpi=300, bbox_inches='tight')
