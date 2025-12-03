@@ -334,16 +334,33 @@ if page == "📊 Overview":
         bank_counts = bank_atms['source'].value_counts().reset_index()
         bank_counts.columns = ['Bank', 'ATM Count']
 
+        # Highlight BOB vs others
+        colors = ['#1f77b4' if bank == 'Bank of Baku' else '#d3d3d3' for bank in bank_counts['Bank']]
+
         fig = px.bar(
             bank_counts,
             x='ATM Count',
             y='Bank',
             orientation='h',
-            color='ATM Count',
-            color_continuous_scale='Blues',
-            title='ATM Distribution by Bank'
+            title='ATM Distribution by Bank',
+            text='ATM Count'
         )
-        fig.update_layout(height=500, showlegend=False)
+        fig.update_traces(
+            marker_color=colors,
+            texttemplate='%{text}',
+            textposition='outside',
+            textfont=dict(size=11)
+        )
+        fig.update_layout(
+            height=500,
+            showlegend=False,
+            xaxis_title="Number of ATMs",
+            yaxis_title="",
+            plot_bgcolor='rgba(0,0,0,0)',
+            xaxis=dict(gridcolor='rgba(200,200,200,0.2)'),
+            font=dict(size=11),
+            margin=dict(l=10, r=50, t=40, b=10)
+        )
         st.plotly_chart(fig, use_container_width=True)
 
     with col2:
@@ -618,7 +635,15 @@ elif page == "🎯 Coverage Gaps":
                 title='Distance to Nearest BOB ATM',
                 labels={'distance_to_bob': 'Distance (km)', 'count': 'Frequency'}
             )
-            fig.update_layout(height=280, showlegend=False)
+            fig.update_traces(marker_color='#ff6b6b', marker_line_color='white', marker_line_width=1)
+            fig.update_layout(
+                height=280,
+                showlegend=False,
+                plot_bgcolor='rgba(0,0,0,0)',
+                xaxis=dict(gridcolor='rgba(200,200,200,0.2)'),
+                yaxis=dict(gridcolor='rgba(200,200,200,0.2)'),
+                font=dict(size=10)
+            )
             st.plotly_chart(fig, use_container_width=True)
 
             # Competitor density distribution
@@ -629,7 +654,15 @@ elif page == "🎯 Coverage Gaps":
                 title='Competitor Density at Gaps',
                 labels={'competitor_density': 'Competitors within 1km', 'count': 'Frequency'}
             )
-            fig.update_layout(height=280, showlegend=False)
+            fig.update_traces(marker_color='#ffa94d', marker_line_color='white', marker_line_width=1)
+            fig.update_layout(
+                height=280,
+                showlegend=False,
+                plot_bgcolor='rgba(0,0,0,0)',
+                xaxis=dict(gridcolor='rgba(200,200,200,0.2)'),
+                yaxis=dict(gridcolor='rgba(200,200,200,0.2)'),
+                font=dict(size=10)
+            )
             st.plotly_chart(fig, use_container_width=True)
 
         # Top gaps by source
@@ -644,11 +677,27 @@ elif page == "🎯 Coverage Gaps":
             x='Gap Count',
             y='Bank',
             orientation='h',
-            color='Gap Count',
-            color_continuous_scale='Reds',
-            title='Number of Unserved Competitor Locations by Bank'
+            title='Unserved Competitor Locations by Bank',
+            text='Gap Count'
         )
-        fig.update_layout(height=400, showlegend=False)
+        fig.update_traces(
+            marker_color='#ff6b6b',
+            marker_line_color='white',
+            marker_line_width=1.5,
+            texttemplate='%{text}',
+            textposition='outside',
+            textfont=dict(size=11)
+        )
+        fig.update_layout(
+            height=400,
+            showlegend=False,
+            xaxis_title="Number of Coverage Gaps",
+            yaxis_title="",
+            plot_bgcolor='rgba(0,0,0,0)',
+            xaxis=dict(gridcolor='rgba(200,200,200,0.2)'),
+            font=dict(size=11),
+            margin=dict(l=10, r=50, t=40, b=10)
+        )
         st.plotly_chart(fig, use_container_width=True)
 
         # Detailed table
@@ -761,12 +810,12 @@ elif page == "🏪 Retail Opportunities":
         with col2:
             st.subheader("Opportunities by Chain")
 
+            # Aggregate by retail chain
             opps_by_chain = retail_opps_df.groupby('source').agg({
-                'opportunity_score': 'mean',
-                'source': 'count'
-            }).reset_index(drop=True)
+                'opportunity_score': 'mean'
+            }).reset_index()
+            opps_by_chain['Count'] = retail_opps_df.groupby('source').size().values
             opps_by_chain.columns = ['Chain', 'Avg Score', 'Count']
-            opps_by_chain['Chain'] = retail_opps_df.groupby('source').groups.keys()
             opps_by_chain['Chain'] = opps_by_chain['Chain'].apply(get_display_name)
 
             fig = px.bar(
@@ -776,9 +825,31 @@ elif page == "🏪 Retail Opportunities":
                 orientation='h',
                 color='Avg Score',
                 color_continuous_scale='Greens',
-                title='Opportunities by Retail Chain'
+                title='Opportunities by Retail Chain',
+                text='Count'
             )
-            fig.update_layout(height=600, showlegend=False)
+            fig.update_traces(
+                marker_line_color='white',
+                marker_line_width=1.5,
+                texttemplate='%{text}',
+                textposition='outside',
+                textfont=dict(size=11, color='black')
+            )
+            fig.update_layout(
+                height=600,
+                showlegend=False,
+                xaxis_title="Number of Opportunities",
+                yaxis_title="",
+                plot_bgcolor='rgba(0,0,0,0)',
+                xaxis=dict(gridcolor='rgba(200,200,200,0.2)'),
+                font=dict(size=11),
+                margin=dict(l=10, r=50, t=40, b=10),
+                coloraxis_colorbar=dict(
+                    title="Avg<br>Score",
+                    thickness=15,
+                    len=0.7
+                )
+            )
             st.plotly_chart(fig, use_container_width=True)
 
         # Top 20 opportunities table
@@ -810,30 +881,83 @@ elif page == "📈 Competitor Analysis":
     col1, col2 = st.columns(2)
 
     with col1:
+        # Highlight BOB vs others
+        colors = ['#1f77b4' if bank == 'Bank of Baku' else '#95c8e8' for bank in bank_stats['Bank']]
+
         fig = px.bar(
             bank_stats,
             x='ATM Count',
             y='Bank',
             orientation='h',
-            color='ATM Count',
-            color_continuous_scale='Blues',
-            title='ATM Market Share by Bank'
+            title='ATM Market Share by Bank',
+            text='ATM Count'
         )
-        fig.update_layout(height=500, showlegend=False)
-        fig.add_vline(x=len(bob_atms), line_dash="dash", line_color="red",
-                     annotation_text="BOB Current Position")
+        fig.update_traces(
+            marker_color=colors,
+            marker_line_color='white',
+            marker_line_width=1.5,
+            texttemplate='%{text}',
+            textposition='outside',
+            textfont=dict(size=11)
+        )
+        fig.update_layout(
+            height=500,
+            showlegend=False,
+            xaxis_title="Number of ATMs",
+            yaxis_title="",
+            plot_bgcolor='rgba(0,0,0,0)',
+            xaxis=dict(gridcolor='rgba(200,200,200,0.2)'),
+            font=dict(size=11),
+            margin=dict(l=10, r=80, t=40, b=10)
+        )
+        fig.add_vline(
+            x=len(bob_atms),
+            line_dash="dash",
+            line_color="#ff6b6b",
+            line_width=2,
+            annotation_text="BOB",
+            annotation_position="top"
+        )
         st.plotly_chart(fig, use_container_width=True)
 
     with col2:
-        # Market share pie
+        # Market share pie with better colors
+        # Highlight BOB
+        colors_pie = ['#1f77b4' if bank == 'Bank of Baku' else '#e8e8e8' for bank in bank_stats['Bank']]
+
         fig = px.pie(
             bank_stats,
             values='ATM Count',
             names='Bank',
             title='Market Share Distribution',
-            hole=0.4
+            hole=0.5
         )
-        fig.update_layout(height=500)
+        fig.update_traces(
+            marker=dict(colors=colors_pie, line=dict(color='white', width=2)),
+            textposition='inside',
+            textinfo='percent',
+            textfont=dict(size=12),
+            hovertemplate='<b>%{label}</b><br>ATMs: %{value}<br>Share: %{percent}<extra></extra>'
+        )
+        fig.update_layout(
+            height=500,
+            font=dict(size=11),
+            legend=dict(
+                orientation="v",
+                yanchor="middle",
+                y=0.5,
+                xanchor="left",
+                x=1.0,
+                font=dict(size=10)
+            )
+        )
+        # Add center text
+        fig.add_annotation(
+            text=f"Total<br>{len(bank_atms)}<br>ATMs",
+            x=0.5, y=0.5,
+            font_size=14,
+            showarrow=False
+        )
         st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("---")
@@ -928,21 +1052,46 @@ elif page == "📈 Competitor Analysis":
         color='Bank',
         hover_data=['Efficiency'],
         title='Network Efficiency: ATM Count vs Spacing',
-        labels={'Avg Spacing (km)': 'Average Distance Between ATMs (km)'}
+        labels={'Avg Spacing (km)': 'Avg Distance Between ATMs (km)'}
+    )
+    fig.update_traces(
+        marker=dict(
+            line=dict(width=1.5, color='white'),
+            opacity=0.8
+        )
     )
     fig.update_layout(
         height=500,
+        plot_bgcolor='rgba(0,0,0,0)',
+        xaxis=dict(
+            gridcolor='rgba(200,200,200,0.2)',
+            title_font=dict(size=12)
+        ),
+        yaxis=dict(
+            gridcolor='rgba(200,200,200,0.2)',
+            title_font=dict(size=12)
+        ),
+        font=dict(size=11),
         legend=dict(
             orientation="v",
             yanchor="middle",
             y=0.5,
             xanchor="left",
             x=1.02,
-            bgcolor="rgba(255, 255, 255, 0.9)",
+            bgcolor="rgba(255, 255, 255, 0.95)",
             bordercolor="gray",
             borderwidth=1,
             font=dict(size=10)
-        )
+        ),
+        margin=dict(l=60, r=150, t=50, b=60)
+    )
+    # Add annotation for better networks (bottom right quadrant)
+    fig.add_annotation(
+        text="← More efficient",
+        x=efficiency_df['ATM Count'].max() * 0.8,
+        y=efficiency_df['Avg Spacing (km)'].min() * 1.2,
+        showarrow=False,
+        font=dict(size=10, color='gray', style='italic')
     )
     st.plotly_chart(fig, use_container_width=True)
 
@@ -1096,9 +1245,26 @@ else:  # ROI Rankings page
                     'Fair': '#ffbb78',
                     'Low': '#ff7f0e'
                 },
-                title='Opportunities by Category'
+                title='Opportunities by Category',
+                text=category_counts.values
             )
-            fig.update_layout(height=300, showlegend=False)
+            fig.update_traces(
+                marker_line_color='white',
+                marker_line_width=1.5,
+                texttemplate='%{text}',
+                textposition='outside',
+                textfont=dict(size=11)
+            )
+            fig.update_layout(
+                height=300,
+                showlegend=False,
+                xaxis_title="Count",
+                yaxis_title="",
+                plot_bgcolor='rgba(0,0,0,0)',
+                xaxis=dict(gridcolor='rgba(200,200,200,0.2)'),
+                font=dict(size=10),
+                margin=dict(l=10, r=40, t=40, b=10)
+            )
             st.plotly_chart(fig, use_container_width=True)
 
             st.markdown("---")
