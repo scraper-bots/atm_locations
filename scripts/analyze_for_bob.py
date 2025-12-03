@@ -231,13 +231,20 @@ def chart4_retail_opportunity_map(data: List[Dict]) -> None:
         'OBA Bank': '#E71D36'
     }
 
+    # Label mapping to clarify these are SUPERMARKETS, not banks
+    label_map = {
+        'Bazarstore': 'Bazarstore (Grocery Chain)',
+        'Bravo Supermarket': 'Bravo Supermarket',
+        'OBA Bank': 'OBA Supermarkets (NOT a bank)'
+    }
+
     for source, color in colors_map.items():
         locs = [loc for loc in retail if loc['source'] == source]
         if locs:
             lats = [safe_float(loc['latitude']) for loc in locs]
             lons = [safe_float(loc['longitude']) for loc in locs]
             ax.scatter(lons, lats, c=color, s=50, alpha=0.6,
-                      label=f'{source} ({len(locs)})', edgecolors='black', linewidths=0.5)
+                      label=f'{label_map[source]} ({len(locs)})', edgecolors='black', linewidths=0.5)
 
     # Plot BOB ATMs
     if bob_atms:
@@ -249,7 +256,7 @@ def chart4_retail_opportunity_map(data: List[Dict]) -> None:
 
     ax.set_xlabel('Longitude', fontsize=12, fontweight='bold')
     ax.set_ylabel('Latitude', fontsize=12, fontweight='bold')
-    ax.set_title('Retail & Supermarket Locations: High Foot Traffic Opportunities\nBlue Stars = BOB ATMs | Colored Dots = Retail Locations',
+    ax.set_title('SUPERMARKET & RETAIL CHAIN Locations: High Foot Traffic Opportunities\nBlue Stars = BOB ATMs | Colored Dots = SUPERMARKET/RETAIL STORES (NOT Banks)',
                  fontsize=14, fontweight='bold', pad=20)
     ax.legend(loc='upper right', fontsize=10, framealpha=0.9)
     ax.grid(True, alpha=0.3)
@@ -461,7 +468,14 @@ def chart7_nearest_retail_opportunities(data: List[Dict]) -> None:
 
     fig, ax = plt.subplots(figsize=(14, 10))
 
-    names = [f"{o['name']}\n({o['source']})" for o in top_opportunities]
+    # Create clear labels showing these are SUPERMARKETS, not banks
+    label_map = {
+        'OBA Bank': 'OBA Supermarket',
+        'Bravo Supermarket': 'Bravo Supermarket',
+        'Bazarstore': 'Bazarstore Grocery'
+    }
+
+    names = [f"{o['name']}\n({label_map.get(o['source'], o['source'])})" for o in top_opportunities]
     distances = [o['distance'] for o in top_opportunities]
 
     colors = ['#E71D36' if 'OBA' in o['source'] else
@@ -479,14 +493,14 @@ def chart7_nearest_retail_opportunities(data: List[Dict]) -> None:
                f'{dist:.1f} km', ha='left', va='center', fontweight='bold', fontsize=9)
 
     ax.set_xlabel('Distance to Nearest BOB ATM (km)', fontsize=12, fontweight='bold')
-    ax.set_title('Top 20 Retail Opportunities for New BOB ATMs\nFurthest from Current BOB Coverage',
+    ax.set_title('Top 20 SUPERMARKET/RETAIL Partnership Opportunities for New BOB ATMs\nThese are RETAIL STORES (NOT Banks) - Furthest from Current BOB Coverage',
                 fontsize=14, fontweight='bold', pad=20)
     ax.grid(axis='x', alpha=0.3)
 
-    # Add legend
+    # Add legend with clear supermarket labels
     patches = [
-        mpatches.Patch(color='#E71D36', label='OBA Bank'),
-        mpatches.Patch(color='#FF9F1C', label='Bazarstore'),
+        mpatches.Patch(color='#E71D36', label='OBA Supermarkets (NOT a bank)'),
+        mpatches.Patch(color='#FF9F1C', label='Bazarstore (Grocery Chain)'),
         mpatches.Patch(color='#2EC4B6', label='Bravo Supermarket')
     ]
     ax.legend(handles=patches, loc='lower right', fontsize=10)
