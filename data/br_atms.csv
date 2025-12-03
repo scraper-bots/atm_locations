@@ -1,0 +1,149 @@
+id,title,slug,type,categories,info,latitude,longitude,city_location,branch_id,cash_in,atm_currencies,date
+4476,"""Goychay"" branch",goycay-filiali_4474,branch,branches,"Address: 2D Mehdi Huseynzade Street, Goychay city Phone: 144 E-mail: goychay@bankrespublika.az Working hours: Monday – Friday: 9:00 AM – 5:30 PM Opening date: November 2025",40.6420662,47.7451923,regions,065,,,2025-11-18 11:13:00
+4394,"""Beylagan"" branch",beyleqan-filiali_4392,branch,branches,"Address: Beylagan city, Sardar Imraliyev street, entrance 292A Phone: 144 E-mail: Beylagan@BankRespublika.az Working hours: Monday - Friday: 08:30- 17:30 Date of creation: July 8, 2025",39.7701636,47.6137369,regions,064,,,2025-07-15 14:44:00
+4296,"""Gabala"" branch",qebele-filiali_4294,branch,branches,"Address: Gabala city, I.B. Gutgashinli street, 204-210 Phone: 144 E-mail: Gabala@bankrespublika.az",40.9750481,47.8414498,regions,063,,,2025-03-11 14:34:00
+4190,"""Fuzuli"" branch",fuzuli-filiali_4188,branch,branches,"Address: Fuzuli city, Heydar Aliyev avenue Phone: 144 e-mail: fuzuli@bankrespublika.az",39.599480,47.150647,regions,061,,,2024-11-20 15:40:00
+3577,Shabran branch,sabran-filiali_3575,branch,branches,"Address: Shabran city, Heydar Aliyev ave, 297 Phone number: 144 E-mail: Shabran@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",41.2115133,48.9578668,regions,,,,2023-09-18 17:44:00
+3335,"""Sadarak"" branch",sederek-filiali_3333,branch,"branches, atms","Address: Baku city, Garadagh district, inside ""Saderak"" Trade Center Phone: 144 E-mail: Sadarak@bankrespublika.az",40.330608,49.7836361,baku,050,,azn usd eur,2023-06-07 16:18:00
+3901,"""Gazakh"" branch",qazax-filiali_3059,branch,branches,"Address: Gazakh city, Heydar Aliyev avenue, 76. Phone: +994222951201 Fax: +994222951201",41.0905398,45.3607516,regions,49,,,2023-02-20 10:42:00
+3902,SME Center (KOB Merkezi),kob-merkezi-filiali_2963,branch,branches,"Address: AZ 1075, Baku city, Narimanov district, Ziya Bunyadov Avenue 38C, block 1969. (in the administrative building of the Baku SME House of the Small and Medium Business Development Agency) Phone: 144 Email: kobmerkezi@bankrespublika.az Opening hours: Monday - Friday: 9:00 - 17:30. Date of creation: January 2023",40.4130419,49.8535906,baku,048,,,2023-01-11 16:52:00
+3903,"""Agjabedi"" branch",agcabedi-filiali_2290,branch,branches,"Address: AZ 0400, Agjabedi city, Azi Aslanov street Phone: 144 E-mail: aghjabadi@bankrespublika.az Working hours: Monday – Friday: 9:00 - 17:30 Founded: June 2022",40.0446243,47.4536638,regions,046,,,2022-06-29 15:34:00
+2231,"""Nakhchivan"" Branch",naxcivan-filiali_2227,branch,branches,"Address: Heydar Aliyev avenue,37-3, Nakhchivan city Phone number: (+994 36) 550 20 26/27/28 E-mail: Nakhchivan@bankrespublika.az Working time: Monday – Friday: 9:00 - 17:30 Creation date: June 2022",39.219181,45.407553,regions,045,,,2022-06-16 12:29:00
+3899,"""Sheki"" branch",seki-filiali_1477,branch,branches,"Address: Sheki city, M.A. Rasulzade avenue Phone: 144 E-mail: Sheki@BankRespublika.az",41.2023238,47.1765699,regions,043,,,2022-01-18 15:30:00
+3898,“Sumgayit” branch,sumqayit-filiali_972,branch,branches,"Address: Sumgayit, 45th quarter, N.Narimanov street, 1 Phone: (+994 18) 642 41 14, (+994 12) 437 25 36 Fax: (+994 18) 644 24 41 E-mail: Sumgayit@BankRespublika.az Working hours: Monday - Friday: 9:00 - 17:30 Founded:: August 2006",40.59369340025972,49.67176735401153,regions,16,,,2020-08-18 18:07:00
+887,Tovuz branch,tovuz-filiali_464,branch,branches,"Address: Tovuz, Sabir str, 9 Phone number: (+994 022) 315 66 78 E-mail: Tovuz@BankRespublika.az Working time: Monday - Friday: 9:00 - 17:30",40.99959341455489,45.63514709472656,regions,39,,,2019-08-08 15:25:00
+879,Ganja branch,gence-filiali_463,branch,branches,"Address: H.Aliyev avenue, 94, Ganja Phone number: (+994 22) 256 43 92 Fax: (+994 22) 256 43 92 E-mail: Ganja@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",40.672162,46.367889,regions,5,,,2019-08-08 15:23:00
+882,Mingachevir branch,mingecevir-filiali_462,branch,branches,"Address: 58A, H.Aliyev ave., Mingechevir Phone number: (+994 24) 275 77 32 Fax: (+994 24) 275 77 32 E-mail: Mingechevir@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",40.76556625520051,47.058555483818054,regions,31,,,2019-08-08 15:19:00
+890,Yevlax branch,yevlax-filiali_461,branch,branches,"Address: 12, H.Aliyev ave., Yevlakh Phone number: (+994 22) 336 23 42 Phone number: (+994 22) 336 23 47 Fax: (+994 22) 336 23 47 E-mail: Yevlax@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",40.61707081691601,47.14813590049744,regions,3,,,2019-08-08 15:18:00
+878,Barda branch,berde-filiali_460,branch,branches,"Address: 102A, Nizami str., Barda Phone number: (+994 20) 205 06 99 Fax: (+994 20) 205 06 99 E-mail: Barda@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30 Creation date: August 2008",40.3776982386996,47.12587355895721,regions,28,,,2019-08-08 15:17:00
+891,Zaqalata branch,zaqatala-filiali_459,branch,branches,"Address: 4, F.Amirov str., Zagatala Phone number: (+994 24) 225 66 75 Phone number: (+994 24) 225 66 75 E-mail: Zagatala@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",41.63366365063957,46.640567779541016,regions,36,,,2019-08-08 15:14:00
+886,Shirvan branch,sirvan-filiali_458,branch,branches,"Address: 26A, 20th January str., Shirvan Phone number: (+994 21) 215 66 88 Fax: (+994 21) 215 66 33 E-mail: Shirvan@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",39.9567968,48.9381305,regions,21,,,2019-08-08 13:00:00
+885,Sabirabad branch,sabirabad-filiali_457,branch,branches,"Address: Sabirabad, , Heydar Aliyev ave., 58A Phone number: (+994 21) 235 50 77 E-mail: Sabirabad@BankRespublika.az Working time: Monday - Friday: 8:30 - 17:30",40.005840046240984,48.471059054136276,regions,38,,,2019-08-08 12:59:00
+884,Quba branch,quba-filiali_456,branch,branches,"Address: 156a, H.Əliyev pr. Guba. Phone number: (+994 23) 335 54 54 Fax: (+994 23) 335 54 54 E-mail: Quba@BankRespublika.az Working time: Bazar ertəsi – Cümə: 9:00 - 17:30",41.361699691715046,48.51355969905853,regions,8,,,2019-08-08 12:57:00
+883,Gakh branch,qax-filiali_455,branch,branches,"Address: 3,İ.Mustafayev str. Gakh. Phone number: (+994 24) 255 52 20 E-mail: Gakh@BankRespublika.az Working time: Bazar ertəsi – Cümə: 9:00 - 17:30",41.41951149810361,46.919474601745605,regions,37,,,2019-08-08 12:56:00
+881,Masalli branch,masalli-fililali_454,branch,branches,"Address: 111, M.Talishkhanov str., Masalli Phone number: (+994 25) 215 43 99 Fax: (+994 25) 215 43 69 E-mail: Masalli@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",39.024133994046764,48.66821885108948,regions,25,,,2019-08-08 12:45:00
+880,Lankaran branch,lenkeran-filiali_453,branch,branches,"Address: 19, S.Akhundov str., Lenkeran Phone number: (+994 25) 255 47 08 Phone number: (+994 25) 255 47 25 Fax: (+994 25) 255 47 15 E-mail: Lenkeran@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",38.75441794597313,48.856791257858276,regions,12,,,2019-08-08 12:43:00
+877,"""Absheron"" branch",abseron-sobesi_452,branch,branches,"""Absheron"" service point Address: 6 km, road Baku-Sumgayit, Xirdalan Phone number: (+994 12) 349 00 00 E-mail: Absheron@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",40.45978893593613,49.75383996963501,regions,27,,,2019-08-08 12:41:00
+888,Khachmaz branch,xacmaz-filiali_451,branch,branches,"Address: 49, N.Narimanov str., Khachmaz Phone number: (+994 23) 325 00 23 Phone number: (+994 23) 325 00 24 Fax: (+994 23) 325 00 24 E-mail: Khachmaz@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",41.46130798228363,48.797769248485565,regions,13,,,2019-08-08 12:34:00
+889,Head Office,yasamal-filiali_448,branch,branches,Adress: Khagani 21 Phone: 144 E-mail: info@bankrespublika.az Working time: Monday – Friday: 9:00 - 17:30,40.373452166144304,49.84465985818588,baku,2,,,2019-08-08 12:16:00
+894,Yasamal branch,yasamal-filiali_447,branch,branches,"Address: 75A, Sharifzade str., Baku Phone number: 144 E-mail: Yasamalsp@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",40.38445298840345,49.80322911663734,baku,40,,,2019-08-07 12:12:00
+892,Neftchilar branch,neftciler-filiali_446,branch,branches,"Address: 51/57, G.Garayev ave., Baku Phone number: 144 E-mail: Neftchiler@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",40.4133593,49.9396153,baku,32,,,2019-08-07 12:09:00
+893,Nasimi branch,nesimi-filiali_445,branch,branches,"Address: Baku city, Nasimi district, 717th quarter, 28 May street, 21A Phone number: 144 E-mail: Nasimi@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",40.37997732222392,49.85438257455826,baku,6,,,2019-08-07 11:37:00
+899,Nizami branch,nizami-filiali_444,branch,branches,"Address: Baku, Between J.Jabbarli and Z. Ahmedbeyov streets Phone number: 144 E-mail: Nizami@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",40.3857362,"49.828438,21",baku,1,,,2019-08-06 18:49:00
+898,Memar Ajemi branch,memar-ecemi-filiali_443,branch,branches,"Address: 8, Ali Mustafayev str., Baku Phone number: 144 E-mail: Memaradjemisp@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",40.4055418,49.8148558,baku,19,,,2019-08-06 18:48:00
+896,Bakikhanov branch,bakixanov-filiali_442,branch,branches,"Address: 126 C, Genjlik str., Bakikhanov district Phone number: 144 E-mail: Bakikhanov@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",40.41189494947813,49.96860980987549,baku,23,,,2019-08-06 18:43:00
+897,Ahmedli branch,ehmedli-filiali_441,branch,branches,"Address: Baku, M. Hadı str. 38D Phone number: 144 E-mail: Ahmedli@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",40.38547946822021,49.95419293642044,baku,9,,,2019-08-06 18:41:00
+895,"""Narimanov"" branch",aga-neymetulla-sobesi_439,branch,branches,"Address: 38, Aga Neymatulla str., Baku Phone number: 144 E-mail: Aganeymatullasp@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30",40.40106916469152,49.87422823905945,baku,24,,,2019-08-06 18:31:00
+902,Azneft branch,azneft-filiali-ofis24_405,branch,branches,"Address: Baku, Neftchiler ave, 67 Phone number: 144 E-mail: Azneft@BankRespublika.az Working time: Monday - Friday: 9:00 - 17:30, Ofis24: 24 hours",40.3608186252178,49.83401149511337,baku,10,,,2019-07-03 16:05:00
+271,Azadlig branch,azadlig-branch_271,branch,branches,"Ünvan: Bakı şəh., Azadlıq pr. 120 Telefon: 144 E-mail: azadlig@bankrespublika.az",40.38953409909272,49.84288209999999,baku,11,,,2019-06-18 17:50:00
+220,Jalilabad branch,celilabad-filiali_220,branch,branches,"Address: 161 B, H.Aliyev ave., Jalilabad Phone number: (+994 25) 245 01 01 Fax: (+994 25) 245 01 03 E-mail: Jalilabad@BankRespublika.az Working time: Monday – Friday: 9:00 - 17:30 Creation date: March 2009",39.21625701598024,48.51415812969208,regions,33,,,2019-03-13 16:19:00
+4479,ATM Goychay branch,goycay-filiali_4477,atm,atms,"Address: 2D Mehdi Huseynzade Street, Goychay city",40.6420662,47.7451923,regions,,1,,2025-11-18 12:23:00
+4452,"ATM ""Gabala"" branch",atm-qebele-filiali_4450,atm,atms,"Address: Gabala city, I.B. Gutgashinli street, 204-210",40.9750481,47.8414498,regions,,,,2025-10-14 17:43:00
+4397,ATM Beylagan,atm-beyleqan_4395,atm,atms,"Address: Beylagan city, Sardar Imraliyev street, entrance 292A",39.7701636,47.6137369,regions,,,,2025-07-15 15:19:00
+4318,ATM - SABAH FOOTBALL CENTER,atm-sabah-futbol-merkezi_4316,atm,atms,"Address: Baku city, Shuvalan, Lev Starchuk street, House 19D",40.4960271,50.1958296,baku,,1,azn usd eur,2025-04-11 19:41:00
+4229,ATM Goranboy branch,atm-goranboy-filiali_4227,atm,atms,"Address: Goranboy city, Heydar Aliyev avenue",40.604569,46.785136,regions,,,,2024-12-19 17:28:00
+4209,ATM CRESCENT MALL,atm-crescent-mall_4207,atm,atms,"Baku, Neftchilar Avenue, 117",40.3723597,49.8577983,baku,,1,azn usd eur,2024-12-05 20:15:00
+4193,"ATM "" Fizuli"" branch",atm-fuzuli-filiali_4191,atm,atms,"Address: Fizuli city, Heydar Aliyev Avenue",39.599480,47.150647,regions,,,,2024-11-20 17:08:00
+4142,ATM CITY PARK MALL,atm-city-park-mall_4140,atm,atms,"Baku city, Babek avenue, 28",40.389561,49.872136,baku,,,,2024-10-09 19:15:00
+4139,ATM Kohna Gunashli,atm-kohne-gunesli_4137,atm,atms,"Baku city, Khatai district, Inqilab Ismayilov street, 5C (Megastore Gunashli)",40.36304,49.969359,baku,,,azn usd,2024-10-08 12:56:00
+4126,"ATM ""Sadarak"" TRADE CENTER",atm-sederek-filiali_4124,atm,atms,"Baku city, Lokbatan settl. ""Sadarak"" Shopping center",40.330608,49.7836361,baku,,1,azn,2024-09-27 15:52:00
+3940,ATM Rakhat Market INGILAB,atm-rahat-market-hasan-aliyev_3938,atm,atms,"Address: Baku city, Hasan Aliyev street, 13 (opposite the Rakhat Market)",40.397842,49.828625,baku,,,azn,2024-04-22 12:58:00
+3859,ATM Kara Karayev,atm-qara-qarayev_3857,atm,atms,"Baku, Nizami district, Ali Hajiyev str? 47a (Gloria Market, 24 hours a day)",40.417176,49.932995,baku,,,,2024-02-16 18:27:00
+4123,ATM KOBIA,atm-kobia_3852,atm,atms,"Baku city. Narimanov district, 1969 block, Ziya Bunyadov avenue, 38C",40.4130419,49.8535906,baku,,,,2024-02-09 20:00:00
+4122,ATM 8 November ave,atm-bravo-8-noyabr-prospekti_3850,atm,atms,"Baku city, 8 November avenue",40.3732742,49.9258729,baku,,,,2024-02-09 19:40:00
+4120,ATM - Fountain Square,atm-fevvareler-meydani_3848,atm,atms,"Baku city, Sabail district, st. Nizami, 60",40.3720086,49.8378303,baku,,,,2024-02-09 19:29:00
+4203,ATM GANJLIK MALL,atm-genclik-mall_3846,atm,atms,"Baku, Fatali Khan Khoyski str, 14",40.400135,49.8503643,baku,,1,azn usd eur,2024-02-09 19:24:00
+4119,ATM BRAVO - 20 January m/s,atm-bravo-20-yanvar_3844,atm,atms,"Baku city, Nasimi district, Tbilisi avenue, block 3007",40.401566,49.810554,baku,,,,2024-02-09 19:18:00
+4206,ATM AZADLIG BRANCH,atm-azadliq_3805,atm,atms,"Baku, Azadlig ave, 120",40.3894423,49.8428859,baku,,1,azn usd eur,2024-01-10 10:34:00
+4157,ATM Shabran branch,atm-sabran_3803,atm,atms,"Shabran city, Heydar Aliyev avenue, 297",41.207674,48.992395,regions,,,,2024-01-10 10:29:00
+4156,ATM Gazakh branch,atm-qazax_3801,atm,atms,"Gazakh city, Heydar Aliyev avenue",41.093333,45.366111,regions,,,,2024-01-10 10:23:00
+4205,ATM HO DIGITAL 2,atm-ho-digital-2_3799,atm,atms,"Baku, Khagani str, 21",40.3730532,49.8445391,baku,,1,azn usd eur,2024-01-09 18:18:00
+4204,ATM HO DIGITAL 1,atm-ho-digital-1_3797,atm,atms,"Baku, Kjagani str,21",40.3730532,49.8445391,baku,,1,azn usd eur,2024-01-09 18:06:00
+4158,ATM Narimanov branch,atm-nerimanov_3794,atm,atms,"Baku city, Agha Neymatulla street, 38",40.395278,49.882222,baku,,1,azn usd eur,2024-01-09 18:01:00
+3335,"""Sadarak"" branch",sederek-filiali_3333,branch,"branches, atms","Address: Baku city, Garadagh district, inside ""Saderak"" Trade Center Phone: 144 E-mail: Sadarak@bankrespublika.az",40.330608,49.7836361,baku,050,,azn usd eur,2023-06-07 16:18:00
+2974,ATM Aghjabadi branch,atm-agcabedi_2972,atm,atms,Agjabadi district. Hazi Aslanov street,40.052778,47.461389,regions,,,azn,2023-01-17 10:18:00
+4153,ATM Khirdalan branch,atm-xirdalan-filiali_2934,atm,atms,"Absheron district, Khirdalan city, M.Guseynzade street, 1",40.448611,49.756389,regions,,1,azn usd eur,2022-12-28 20:21:00
+4155,ATM Sheki branch,atm-seki-filiali_2933,atm,atms,"Sheki city, M.A. Rasulzade avenue",41.191944,47.170556,regions,,,azn usd,2022-12-28 20:09:00
+2232,ATM Nakhchivan Branch,atm-naxcivan_2229,atm,atms,"Address: Heydar Aliyev avenue,37-3, Nakhchivan city",39.208889,45.412222,regions,,,azn,2022-06-16 12:43:00
+1423,ATM Deniz Mall,atm-deniz-mall_1421,atm,atms,"Baku city, Neftchilar ave, 26A - Deniz Mall (Caspian Waterfront Mall)",40.3582772,49.8330659,baku,,1,azn usd eur,2021-11-11 20:02:00
+1420,ATM Bravo - Yeni Gunashli,atm-bravo-yeni-gunesli_1418,atm,atms,"Baku city, residential park Yeni Gunashli (BRAVO market)",40.3869652,49.9752878,baku,,,azn,2021-11-11 19:55:00
+1417,ATM Bravo 8th microdistrict,atm-bravo-8-ci-mikrorayon_1415,atm,atms,"Baku city, 8th microdistrict (BRAVO market - on the site of the former restaurant ""Oasis"")",40.4196756,49.8468561,baku,,,azn,2021-11-11 19:48:00
+1414,ATM Khirdalan (Industrial zone),atm-xirdalan-sz_1412,atm,atms,"Khirdalan city, Qazanfar Khaligov street, Industrial Zone",40.448611,49.756389,khirdalan,,,azn,2021-11-11 19:16:00
+4151,ATM BRAVO CENTER SUMQAYIT,atm-bravo-center-sumqayit_1353,atm,atms,"Sumgait city, 9th microdistrict, U. Hajibeyov street, 2",40.589722,49.668611,regions,,,azn,2021-09-22 12:35:00
+4121,ATM 9th microdistrict,atm-9-cu-mikrorayon_1257,atm,atms,"Baku city, Mir Jalal street, 59 K",40.4187855,49.8110548,baku,,,azn ,2021-04-09 19:52:00
+1256,ATM BRAVO HIPERMARKET – Koroglu,atm-bravo-hipermarket-koroglu,atm,atms,"Baku city. H.Aliyev ave, 153",40.4179145,49.91476,Baku,,,azn ,2021-04-09 19:33:00
+3941,ATM Rahat Market (Azadlig Metro Station),atm-rahat-market-azadliq-metrosu_1252,atm,atms,"Baku city, Binagadi district, 7th microdistrict, S.S. Akhundov street, 3",40.4256219,49.8432708,Baku,,,azn ,2021-04-09 17:57:00
+1251, ATM TIME TOWER,atm-time-tower_1248,atm,atms,"Baku city, Nasimi district, Tramway lane, 4",40.3791564,49.8587823,Baku,,,azn usd,2021-04-09 15:59:00
+924,Bravo Hipermarket (20 Yanvar m.),bravo-hipermarket-20-yanvar-m_922,atm,atms,"Baku, Nasimi district, ave. Tbilisi, yard 3007",40.4017987,49.8101259,Baku,,,azn,2020-06-04 17:12:00
+921,"ATM ""Santral Electric""",atm-santral-elektrik_919,atm,atms,"Baku city, Ziya Buniyadov Avenue 20/61. ""Santral Electric"" (small)",40.4259185,49.9075275,Baku,,,azn,2020-06-04 17:09:00
+918,ATM Yeni Yasamal,yeni-yasamal_916,atm,atms,"Baku city, Yasamal distict, Asad Akhmadov street, 203/37 (near Bazar Store)",40.3937207,49.7948932,Baku,,,azn,2020-06-04 16:31:00
+826,ATM Babək Plaza,atm-babek-plaza_527,atm,atms,,40.388444,49.876802,baku,,0,azn,2019-08-09 16:42:00
+825,ATM Azure Plaza,atm-azure_525,atm,atms,"Baku city, Nobel avenue, 15",40.3782599,49.8750604,baku,,,azn,2019-08-09 16:41:00
+838,ATM Bravo Hipermarket - Akhmadli,atm-bravo-hipermarket_524,atm,atms,"Baku, Ahmadli settl, Ramiz Quliyev str., 4.",40.3747081,49.9447308,baku,,,azn,2019-08-09 16:40:00
+837,ATM Bio Market / Zira,atm-bio-market-zire_523,atm,atms,"Baku city, Khazar district, Dubendi area",40.4195441,50.2606791,baku,,,azn,2019-08-09 16:39:00
+846,ATM Huseyn Cavid,atm-huseyn-cavid_521,atm,atms,"Baku city, Landau street, 6B.",40.3722255,49.8164438,baku,,0,AZN / USD,2019-08-09 16:36:00
+868,ATM Tovuz,atm-tovuz_520,atm,atms,"Address: Tovuz city, Sabir street, 9",40.992222,45.628889,regions,,0,,2019-08-09 16:35:00
+843,ATM Ganja 2,atm-gence-2_519,atm,atms,"Ganja city, M.A. Sabir street, 39",40.682778,46.360556,regions,,0,,2019-08-09 16:34:00
+844,ATM Ganja branch,atm-gence_518,atm,atms,"Ganja city, Haydar Aliyev ave, 94",40.682778,46.360556,regions,,1,azn usd eur,2019-08-09 16:33:00
+853,ATM Mingachevir,atm-mingecevir_517,atm,atms,"Mingachevir city, H. Aliyev, 58",40.77,47.048889,regions,,0,,2019-08-09 16:32:00
+873,ATM Yevlax,atm-yevlax_516,atm,atms,"Address: Yevlakh, Heydar Aliyev Avenue, 12",40.617222,47.15,regions,,0,,2019-08-09 16:31:00
+836,ATM Barda branch,atm-berde_515,atm,atms,"Barda city, Nizami street, 102A",40.374444,47.126667,regions,,0,,2019-08-09 16:30:00
+874,ATM Zaqatala branch,atm-zaqatala_514,atm,atms,"Address: Zagatala city, F.Amirov street, 4",41.633611,46.643333,regions,,0,,2019-08-09 16:29:00
+867,ATM Sumqayit,atm-sumqayit_513,atm,atms,"Address: Sumgait city, 45th quarter, N. Narimanov str, 1",40.589722,49.668611,regions,,1,azn usd eur,2019-08-09 16:28:00
+866,ATM Shirvan,atm-sirvan_512,atm,atms,"Address: Shirvan city, 20 January street, 26A",39.9567968,48.9381305,regions,,0,,2019-08-09 16:27:00
+863,ATM Sabirabad branch,atm-sabirabad_511,atm,atms,"Sabirabad city, Heydar Aliyev avenue, 58A",39.261944,48.533056,regions,,0,,2019-08-09 16:26:00
+861,ATM Quba branch,atm-quba_510,atm,atms,"Quba city, H.Aliyev ave. 156А",41.359722,48.5125,regions,,0,,2019-08-09 16:25:00
+860,ATM Qax,atm-qax_509,atm,atms,"Gakh city, I. Mustafayev street, 3",41.4225,46.924167,regions,,0,,2019-08-09 16:24:00
+850,ATM Masalli,atm-massali_508,atm,atms,"Address: Masally city, Talyshkhanov street, 111",39.034167,48.665556,regions,,,,2019-08-09 16:23:00
+870,ATM Xacmaz,atm-xacmaz_506,atm,atms,"Address: Khachmaz city, N.Narimanov street, 49",41.46426,48.80565,regions,,0,,2019-08-09 16:22:00
+848,ATM Lankaran,atm-lenkeran_507,atm,atms,"Address: Lankaran, Sh. Akhundov street. 19",38.753611,48.851111,regions,,0,,2019-08-09 16:22:00
+841,ATM Calilabad,atm-celilabad_505,atm,atms,"Address: Jalilabad city. Avenue, G. Aliyev, 161 B",39.208889,48.497222,regions,,0,,2019-08-09 16:21:00
+827,ATM Babek avenue,atm-babek_503,atm,atms,"Baku city, Keshla setllement, Gasim bey Zakir street, 7",40.3910051,49.8884648,baku,,,azn,2019-08-09 16:19:00
+816,ATM 5 Martaba,atm-5-mertebe_501,atm,atms,,40.3763569,"49.8320705,18",baku,,0,,2019-08-09 16:11:00
+859,ATM Port Baku Mall,atm-port-baku_494,atm,atms,"Address: Baku city, Neftchilyar Avenue, 152",40.3765195,49.8597382,baku,,,azn,2019-08-09 15:58:00
+845,ATM Absheron service point (HONDA),atm-honda_493,atm,atms,"Khirdalan city, Baku-Sumgait highway, 6th km.",40.448611,49.756389,regions,,0,,2019-08-09 15:57:00
+864,ATM Sahil,atm-sahil_492,atm,atms,"Address: Baku city, Garadag district, Sahil settl. (Primorsk), near the central post office",40.2227125,49.5765238,baku,,,azn,2019-08-09 15:55:00
+871,ATM Khalglar Dostlughu,atm-xalqlar-dostlugu_491,atm,atms,"Baku city, G. Garayev Ave",40.3978043,49.9525598,baku,,,azn,2019-08-09 15:54:00
+872,ATM Yasamal branch,atm-yasamal_489,atm,atms,"Baku city, Sharifzade street, 75A",40.38445298840345,49.80322911663734,baku,,1,,2019-08-09 15:48:00
+835,ATM Head Office 3,atm-bas-ofis-3_486,atm,atms,"Baku, Khagani str, 21",40.3730532,49.8445391,baku,,1,azn usd,2019-08-09 15:44:00
+821,ATM Araz Market / İnshaatchilar,atm-araz-market-insaatcilar_485,atm,atms,"Address: Baku city, Inshaatchilar ave, 31",40.3839964,49.8229415,baku,,,azn usd,2019-08-09 15:42:00
+852,ATM MetroPark,atm-metropark_484,atm,atms,"Baku, Tabriz str, 44",40.4032229,49.8721907,baku,,1,azn usd eur,2019-08-09 15:41:00
+828,ATM Badamdar,atm-badamdar-2_483,atm,atms,"Baku city. Badamdar settlement, T. Mammadov street 9",40.3373815,49.8047437,baku,,,azn,2019-08-09 15:39:00
+822,ATM Araz Market / Sharifli,atm-araz-market-serifli_482,atm,atms,"Baku city, Nizami district, I. Sharifli street, house 25",40.4133165,49.9490429,baku,,,azn usd,2019-08-09 15:38:00
+814,ATM 28 Mall,atm-28-mall_480,atm,atms,"Address: Baku, intersection of Azadlig Avenue and Fizuli Street",40.379125297311056,49.8457673192024,baku,,1,azn usd eur,2019-08-09 13:27:00
+857,ATM Park Bulvar,atm-park-bulvar_479,atm,atms,"Baku city, Neftchilar avenue (Seaside boulevard)",40.3706993,49.8493432,baku,,,azn,2019-08-09 13:25:00
+858,ATM Parlament avenue,atm-parlament_478,atm,atms,"Baku city, Parliament avenue, 1",40.3641559,49.8188841,baku,,0,AZN / USD,2019-08-09 13:19:00
+854,ATM Neftchilar branch,atm-neftciler_477,atm,atms,"Baku city, G. Garayev Ave. 61C",40.4135778,49.9414256,baku,,1,azn usd eur,2019-08-09 13:17:00
+851,ATM Memar Ajemi branch,atm-memar-ecemi_474,atm,atms,"Baku city, Ali Mustafayev str. 24",40.4055418,49.8148558,baku,,1,azn usd eur,2019-08-09 13:08:00
+856,"ATM ""Nasimi"" Branch",atm-nesimi_473,atm,atms,"Baku city, D. Aliyeva street. 243",40.3773197,49.8164438,baku,,1,azn usd eur,2019-08-09 13:07:00
+833,ATM Head Office 3,atm-bas-ofis_471,atm,atms,,40.37351551662288,49.84465450048447,baku,,1,,2019-08-09 13:00:00
+831,ATM Bakixanov branch,atm-bakixanov_470,atm,atms,"Baku city, Bakikhanov settlement, Ganjlik street, 126 C",40.4127524,49.9680814,baku,,1,azn usd,2019-08-09 12:58:00
+855,ATM Nizami branch,atm-nerimanov-filiali_469,atm,atms,"Address: Baku city, at the intersection of J. Jabbarli and Ziverbyay Akhmedbyaev streets",40.3856365,49.8284181,baku,,1,azn usd eur,2019-08-09 12:55:00
+824,ATM Azneft branch,atm-azneft_467,atm,atms,"Baku city, Neftchilar avenue, 67",40.361008,49.834104,baku,,1,azn usd eur,2019-08-09 12:50:00
+876,ATM Ahmedli,atm-ehmedli_466,atm,atms,"Baku city, Ahmedli settlement, Muhammad Hadi street",40.3851613,49.9543046,baku,,1,azn usd,2019-08-08 15:35:00
+875,ATM BRAVO Mardakan,atm-merdekan_465,atm,atms,"Baku city. Khazar District, Sergey Yesenin Street 350",40.4863259,50.1668629,baku,,,azn usd,2019-08-08 15:31:00
+4479,ATM Goychay branch,goycay-filiali_4477,atm,atms,"Address: 2D Mehdi Huseynzade Street, Goychay city",40.6420662,47.7451923,regions,,1,,2025-11-18 12:23:00
+4318,ATM - SABAH FOOTBALL CENTER,atm-sabah-futbol-merkezi_4316,atm,atms,"Address: Baku city, Shuvalan, Lev Starchuk street, House 19D",40.4960271,50.1958296,baku,,1,azn usd eur,2025-04-11 19:41:00
+4209,ATM CRESCENT MALL,atm-crescent-mall_4207,atm,atms,"Baku, Neftchilar Avenue, 117",40.3723597,49.8577983,baku,,1,azn usd eur,2024-12-05 20:15:00
+4126,"ATM ""Sadarak"" TRADE CENTER",atm-sederek-filiali_4124,atm,atms,"Baku city, Lokbatan settl. ""Sadarak"" Shopping center",40.330608,49.7836361,baku,,1,azn,2024-09-27 15:52:00
+4203,ATM GANJLIK MALL,atm-genclik-mall_3846,atm,atms,"Baku, Fatali Khan Khoyski str, 14",40.400135,49.8503643,baku,,1,azn usd eur,2024-02-09 19:24:00
+4206,ATM AZADLIG BRANCH,atm-azadliq_3805,atm,atms,"Baku, Azadlig ave, 120",40.3894423,49.8428859,baku,,1,azn usd eur,2024-01-10 10:34:00
+4205,ATM HO DIGITAL 2,atm-ho-digital-2_3799,atm,atms,"Baku, Khagani str, 21",40.3730532,49.8445391,baku,,1,azn usd eur,2024-01-09 18:18:00
+4204,ATM HO DIGITAL 1,atm-ho-digital-1_3797,atm,atms,"Baku, Kjagani str,21",40.3730532,49.8445391,baku,,1,azn usd eur,2024-01-09 18:06:00
+4158,ATM Narimanov branch,atm-nerimanov_3794,atm,atms,"Baku city, Agha Neymatulla street, 38",40.395278,49.882222,baku,,1,azn usd eur,2024-01-09 18:01:00
+4153,ATM Khirdalan branch,atm-xirdalan-filiali_2934,atm,atms,"Absheron district, Khirdalan city, M.Guseynzade street, 1",40.448611,49.756389,regions,,1,azn usd eur,2022-12-28 20:21:00
+1423,ATM Deniz Mall,atm-deniz-mall_1421,atm,atms,"Baku city, Neftchilar ave, 26A - Deniz Mall (Caspian Waterfront Mall)",40.3582772,49.8330659,baku,,1,azn usd eur,2021-11-11 20:02:00
+844,ATM Ganja branch,atm-gence_518,atm,atms,"Ganja city, Haydar Aliyev ave, 94",40.682778,46.360556,regions,,1,azn usd eur,2019-08-09 16:33:00
+867,ATM Sumqayit,atm-sumqayit_513,atm,atms,"Address: Sumgait city, 45th quarter, N. Narimanov str, 1",40.589722,49.668611,regions,,1,azn usd eur,2019-08-09 16:28:00
+872,ATM Yasamal branch,atm-yasamal_489,atm,atms,"Baku city, Sharifzade street, 75A",40.38445298840345,49.80322911663734,baku,,1,,2019-08-09 15:48:00
+835,ATM Head Office 3,atm-bas-ofis-3_486,atm,atms,"Baku, Khagani str, 21",40.3730532,49.8445391,baku,,1,azn usd,2019-08-09 15:44:00
+852,ATM MetroPark,atm-metropark_484,atm,atms,"Baku, Tabriz str, 44",40.4032229,49.8721907,baku,,1,azn usd eur,2019-08-09 15:41:00
+814,ATM 28 Mall,atm-28-mall_480,atm,atms,"Address: Baku, intersection of Azadlig Avenue and Fizuli Street",40.379125297311056,49.8457673192024,baku,,1,azn usd eur,2019-08-09 13:27:00
+854,ATM Neftchilar branch,atm-neftciler_477,atm,atms,"Baku city, G. Garayev Ave. 61C",40.4135778,49.9414256,baku,,1,azn usd eur,2019-08-09 13:17:00
+851,ATM Memar Ajemi branch,atm-memar-ecemi_474,atm,atms,"Baku city, Ali Mustafayev str. 24",40.4055418,49.8148558,baku,,1,azn usd eur,2019-08-09 13:08:00
+856,"ATM ""Nasimi"" Branch",atm-nesimi_473,atm,atms,"Baku city, D. Aliyeva street. 243",40.3773197,49.8164438,baku,,1,azn usd eur,2019-08-09 13:07:00
+833,ATM Head Office 3,atm-bas-ofis_471,atm,atms,,40.37351551662288,49.84465450048447,baku,,1,,2019-08-09 13:00:00
+831,ATM Bakixanov branch,atm-bakixanov_470,atm,atms,"Baku city, Bakikhanov settlement, Ganjlik street, 126 C",40.4127524,49.9680814,baku,,1,azn usd,2019-08-09 12:58:00
+855,ATM Nizami branch,atm-nerimanov-filiali_469,atm,atms,"Address: Baku city, at the intersection of J. Jabbarli and Ziverbyay Akhmedbyaev streets",40.3856365,49.8284181,baku,,1,azn usd eur,2019-08-09 12:55:00
+824,ATM Azneft branch,atm-azneft_467,atm,atms,"Baku city, Neftchilar avenue, 67",40.361008,49.834104,baku,,1,azn usd eur,2019-08-09 12:50:00
+876,ATM Ahmedli,atm-ehmedli_466,atm,atms,"Baku city, Ahmedli settlement, Muhammad Hadi street",40.3851613,49.9543046,baku,,1,azn usd,2019-08-08 15:35:00
