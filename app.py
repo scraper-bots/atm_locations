@@ -365,6 +365,19 @@ if page == "📊 Overview":
             title='All Bank ATM Locations (Sample)',
             height=500
         )
+        fig.update_layout(
+            legend=dict(
+                orientation="v",
+                yanchor="top",
+                y=0.99,
+                xanchor="right",
+                x=0.99,
+                bgcolor="rgba(255, 255, 255, 0.9)",
+                bordercolor="gray",
+                borderwidth=1,
+                font=dict(size=9)
+            )
+        )
         st.plotly_chart(fig, use_container_width=True)
 
     # Coverage gaps preview
@@ -398,6 +411,11 @@ elif page == "🗺️ Interactive Map":
     with col3:
         show_retail = st.checkbox("Show Retail Locations", value=False)
 
+    if len(selected_banks) == 0:
+        st.warning("⚠️ Please select at least one bank from the sidebar to view competitor ATMs.")
+    else:
+        st.info(f"ℹ️ Showing {len(selected_banks)} banks. Hover over markers for details.")
+
     # Limit data for performance
     max_points_per_layer = 200
 
@@ -416,23 +434,22 @@ elif page == "🗺️ Interactive Map":
         ))
 
     if show_competitors:
-        for bank in selected_banks:
-            if bank != 'Bank of Baku':
-                bank_data = competitor_atms[competitor_atms['source'] == bank]
+        # Group all competitors into one layer to avoid legend clutter
+        competitor_sample = competitor_atms[competitor_atms['source'].isin(selected_banks)]
+        if len(competitor_sample) > 500:
+            competitor_sample = competitor_sample.sample(500)
 
-                # Sample if too many points
-                if len(bank_data) > max_points_per_layer:
-                    bank_data = bank_data.sample(max_points_per_layer)
-
-                fig.add_trace(go.Scattermapbox(
-                    lat=bank_data['latitude'],
-                    lon=bank_data['longitude'],
-                    mode='markers',
-                    marker=dict(size=8, opacity=0.6),
-                    name=bank,
-                    text=bank_data['address'],
-                    hovertemplate=f'<b>{bank}</b><br>%{{text}}<extra></extra>'
-                ))
+        fig.add_trace(go.Scattermapbox(
+            lat=competitor_sample['latitude'],
+            lon=competitor_sample['longitude'],
+            mode='markers',
+            marker=dict(size=8, opacity=0.6, color='red'),
+            name='Competitor ATMs',
+            text=competitor_sample.apply(
+                lambda x: f"<b>{x['source']}</b><br>{x['address']}", axis=1
+            ),
+            hovertemplate='%{text}<extra></extra>'
+        ))
 
     if show_retail:
         retail_sample = retail_locations
@@ -466,10 +483,13 @@ elif page == "🗺️ Interactive Map":
         showlegend=True,
         legend=dict(
             yanchor="top",
-            y=0.99,
+            y=0.98,
             xanchor="left",
             x=0.01,
-            bgcolor="rgba(255, 255, 255, 0.8)"
+            bgcolor="rgba(255, 255, 255, 0.95)",
+            bordercolor="gray",
+            borderwidth=1,
+            font=dict(size=11)
         )
     )
 
@@ -572,7 +592,17 @@ elif page == "🎯 Coverage Gaps":
                 ),
                 height=600,
                 margin=dict(l=0, r=0, t=0, b=0),
-                showlegend=True
+                showlegend=True,
+                legend=dict(
+                    yanchor="top",
+                    y=0.98,
+                    xanchor="right",
+                    x=0.99,
+                    bgcolor="rgba(255, 255, 255, 0.95)",
+                    bordercolor="gray",
+                    borderwidth=1,
+                    font=dict(size=10)
+                )
             )
 
             st.plotly_chart(fig, use_container_width=True)
@@ -713,7 +743,17 @@ elif page == "🏪 Retail Opportunities":
                 ),
                 height=600,
                 margin=dict(l=0, r=0, t=0, b=0),
-                showlegend=True
+                showlegend=True,
+                legend=dict(
+                    yanchor="top",
+                    y=0.98,
+                    xanchor="right",
+                    x=0.99,
+                    bgcolor="rgba(255, 255, 255, 0.95)",
+                    bordercolor="gray",
+                    borderwidth=1,
+                    font=dict(size=10)
+                )
             )
 
             st.plotly_chart(fig, use_container_width=True)
@@ -763,13 +803,9 @@ elif page == "📈 Competitor Analysis":
     # Market share comparison
     st.subheader("Market Position Analysis")
 
-    bank_stats = bank_atms.groupby('source').agg({
-        'source': 'count',
-        'latitude': lambda x: x.count(),
-        'longitude': lambda x: x.count()
-    }).reset_index()
-    bank_stats.columns = ['Bank', 'ATM Count', 'lat_count', 'lon_count']
-    bank_stats = bank_stats[['Bank', 'ATM Count']].sort_values('ATM Count', ascending=False)
+    bank_stats = bank_atms.groupby('source').size().reset_index(name='ATM Count')
+    bank_stats.columns = ['Bank', 'ATM Count']
+    bank_stats = bank_stats.sort_values('ATM Count', ascending=False)
 
     col1, col2 = st.columns(2)
 
@@ -856,15 +892,24 @@ elif page == "📈 Competitor Analysis":
 
     banks = list(co_location_matrix.index)
 
+    # Simplify bank names for better readability
+    short_names = {bank: bank.replace(' Bank', '').replace('Bank ', '') for bank in banks}
+    matrix_display = co_location_matrix.copy()
+    matrix_display.index = [short_names.get(b, b) for b in matrix_display.index]
+    matrix_display.columns = [short_names.get(b, b) for b in matrix_display.columns]
+
     fig = px.imshow(
-        co_location_matrix,
-        labels=dict(x="Bank", y="Bank", color="Co-locations"),
-        x=banks,
-        y=banks,
+        matrix_display,
+        labels=dict(x="Bank", y="Bank", color="Count"),
         color_continuous_scale='YlOrRd',
-        title="Co-location Matrix (within 500m)"
+        title="Co-location Matrix (within 500m)",
+        text_auto=True
     )
-    fig.update_layout(height=600)
+    fig.update_layout(
+        height=600,
+        xaxis=dict(tickangle=-45, tickfont=dict(size=10)),
+        yaxis=dict(tickfont=dict(size=10))
+    )
     st.plotly_chart(fig, use_container_width=True)
 
     # Market penetration efficiency
@@ -885,7 +930,20 @@ elif page == "📈 Competitor Analysis":
         title='Network Efficiency: ATM Count vs Spacing',
         labels={'Avg Spacing (km)': 'Average Distance Between ATMs (km)'}
     )
-    fig.update_layout(height=500)
+    fig.update_layout(
+        height=500,
+        legend=dict(
+            orientation="v",
+            yanchor="middle",
+            y=0.5,
+            xanchor="left",
+            x=1.02,
+            bgcolor="rgba(255, 255, 255, 0.9)",
+            bordercolor="gray",
+            borderwidth=1,
+            font=dict(size=10)
+        )
+    )
     st.plotly_chart(fig, use_container_width=True)
 
 else:  # ROI Rankings page
@@ -999,7 +1057,17 @@ else:  # ROI Rankings page
                 ),
                 height=600,
                 margin=dict(l=0, r=0, t=0, b=0),
-                showlegend=True
+                showlegend=True,
+                legend=dict(
+                    yanchor="top",
+                    y=0.98,
+                    xanchor="right",
+                    x=0.99,
+                    bgcolor="rgba(255, 255, 255, 0.95)",
+                    bordercolor="gray",
+                    borderwidth=1,
+                    font=dict(size=10)
+                )
             )
 
             st.plotly_chart(fig, use_container_width=True)
