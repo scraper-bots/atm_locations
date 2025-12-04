@@ -916,6 +916,243 @@ elif page == "🏪 Retail Opportunities":
             )
             st.plotly_chart(fig, use_container_width=True)
 
+        # Retail Chain Performance Analysis
+        st.markdown("---")
+        st.subheader("Retail Chain Performance Analysis")
+        st.markdown("Identifying the best supermarket chains and locations for ATM placement")
+
+        # Calculate detailed metrics by chain
+        chain_metrics = []
+        for chain in retail_opps_df['source'].unique():
+            chain_data = retail_opps_df[retail_opps_df['source'] == chain]
+            chain_metrics.append({
+                'Chain': get_display_name(chain),
+                'Total Locations': len(chain_data),
+                'Avg Score': chain_data['opportunity_score'].mean(),
+                'Max Score': chain_data['opportunity_score'].max(),
+                'Min Score': chain_data['opportunity_score'].min(),
+                'Excellent (>40)': len(chain_data[chain_data['opportunity_score'] > 40]),
+                'Good (30-40)': len(chain_data[(chain_data['opportunity_score'] >= 30) & (chain_data['opportunity_score'] <= 40)]),
+                'Fair (<30)': len(chain_data[chain_data['opportunity_score'] < 30]),
+                'Avg Distance to BOB': chain_data['distance_to_bob'].mean(),
+                'Avg Competitor Density': chain_data['competitor_density'].mean()
+            })
+
+        chain_metrics_df = pd.DataFrame(chain_metrics).sort_values('Avg Score', ascending=False)
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            # Chain comparison - bar chart
+            fig = px.bar(
+                chain_metrics_df,
+                x='Chain',
+                y='Avg Score',
+                title='Average Opportunity Score by Chain',
+                text='Avg Score',
+                color='Avg Score',
+                color_continuous_scale='Greens'
+            )
+            fig.update_traces(
+                texttemplate='%{text:.1f}',
+                textposition='outside',
+                textfont=dict(size=12),
+                marker_line_color='white',
+                marker_line_width=1.5
+            )
+            fig.update_layout(
+                height=400,
+                showlegend=False,
+                xaxis_title="",
+                yaxis_title="Average Opportunity Score",
+                plot_bgcolor='rgba(0,0,0,0)',
+                yaxis=dict(gridcolor='rgba(200,200,200,0.2)'),
+                font=dict(size=11),
+                margin=dict(l=50, r=10, t=40, b=10)
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+        with col2:
+            # Quality distribution stacked bar
+            quality_data = chain_metrics_df[['Chain', 'Excellent (>40)', 'Good (30-40)', 'Fair (<30)']].copy()
+            fig = go.Figure()
+
+            fig.add_trace(go.Bar(
+                name='Excellent (>40)',
+                x=quality_data['Chain'],
+                y=quality_data['Excellent (>40)'],
+                marker_color='#2ca02c',
+                text=quality_data['Excellent (>40)'],
+                textposition='inside',
+                textfont=dict(color='white', size=11)
+            ))
+            fig.add_trace(go.Bar(
+                name='Good (30-40)',
+                x=quality_data['Chain'],
+                y=quality_data['Good (30-40)'],
+                marker_color='#98df8a',
+                text=quality_data['Good (30-40)'],
+                textposition='inside',
+                textfont=dict(color='black', size=11)
+            ))
+            fig.add_trace(go.Bar(
+                name='Fair (<30)',
+                x=quality_data['Chain'],
+                y=quality_data['Fair (<30)'],
+                marker_color='#ffbb78',
+                text=quality_data['Fair (<30)'],
+                textposition='inside',
+                textfont=dict(color='black', size=11)
+            ))
+
+            fig.update_layout(
+                barmode='stack',
+                title='Location Quality Distribution by Chain',
+                height=400,
+                xaxis_title="",
+                yaxis_title="Number of Locations",
+                plot_bgcolor='rgba(0,0,0,0)',
+                yaxis=dict(gridcolor='rgba(200,200,200,0.2)'),
+                font=dict(size=11),
+                legend=dict(
+                    orientation="h",
+                    yanchor="bottom",
+                    y=1.02,
+                    xanchor="center",
+                    x=0.5,
+                    font=dict(size=10)
+                ),
+                margin=dict(l=50, r=10, t=60, b=10)
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+        # Detailed metrics table
+        st.markdown("---")
+        st.subheader("Detailed Chain Comparison")
+
+        display_metrics = chain_metrics_df.copy()
+        display_metrics['Avg Score'] = display_metrics['Avg Score'].round(1)
+        display_metrics['Max Score'] = display_metrics['Max Score'].round(1)
+        display_metrics['Min Score'] = display_metrics['Min Score'].round(1)
+        display_metrics['Avg Distance to BOB'] = display_metrics['Avg Distance to BOB'].round(2)
+        display_metrics['Avg Competitor Density'] = display_metrics['Avg Competitor Density'].round(1)
+
+        st.dataframe(display_metrics, use_container_width=True, height=150)
+
+        # Best location per chain
+        st.markdown("---")
+        st.subheader("Best Location per Retail Chain")
+        st.markdown("Top-ranked location from each supermarket chain")
+
+        col1, col2, col3 = st.columns(3)
+
+        for idx, (col, chain_source) in enumerate(zip([col1, col2, col3], retail_opps_df['source'].unique())):
+            chain_data = retail_opps_df[retail_opps_df['source'] == chain_source]
+            best_location = chain_data.nlargest(1, 'opportunity_score').iloc[0]
+
+            with col:
+                st.markdown(f"### {get_display_name(chain_source)}")
+                st.metric("Opportunity Score", f"{best_location['opportunity_score']:.1f}")
+                st.metric("Distance to BOB", f"{best_location['distance_to_bob']:.2f} km")
+                st.metric("Competitor Density", int(best_location['competitor_density']))
+                st.caption(f"📍 {best_location['address']}")
+                st.caption(f"📊 {best_location['latitude']:.5f}, {best_location['longitude']:.5f}")
+
+        # Top 10 across all chains comparison
+        st.markdown("---")
+        st.subheader("Top 10 Locations: Chain Comparison")
+
+        top_10_all = retail_opps_df.nlargest(10, 'opportunity_score').copy()
+        top_10_all['Rank'] = range(1, len(top_10_all) + 1)
+        top_10_all['Display_Chain'] = top_10_all['source'].apply(get_display_name)
+
+        # Chain distribution in top 10
+        col1, col2 = st.columns([2, 1])
+
+        with col1:
+            # Scatter plot of top 10
+            fig = px.scatter(
+                top_10_all,
+                x='distance_to_bob',
+                y='competitor_density',
+                size='opportunity_score',
+                color='Display_Chain',
+                hover_data=['address', 'opportunity_score'],
+                title='Top 10 Locations: Distance vs Competition',
+                labels={
+                    'distance_to_bob': 'Distance to Nearest BOB ATM (km)',
+                    'competitor_density': 'Competitor ATMs Nearby',
+                    'Display_Chain': 'Retail Chain'
+                },
+                color_discrete_map={
+                    'OBA Supermarket': '#51cf66',
+                    'Bravo Supermarket': '#ffa94d',
+                    'Bazarstore': '#ff6b6b'
+                }
+            )
+            fig.update_traces(
+                marker=dict(
+                    line=dict(width=2, color='white'),
+                    opacity=0.8
+                )
+            )
+            fig.update_layout(
+                height=400,
+                plot_bgcolor='rgba(0,0,0,0)',
+                xaxis=dict(gridcolor='rgba(200,200,200,0.2)'),
+                yaxis=dict(gridcolor='rgba(200,200,200,0.2)'),
+                font=dict(size=11),
+                legend=dict(
+                    title="Retail Chain",
+                    yanchor="top",
+                    y=0.99,
+                    xanchor="left",
+                    x=0.01,
+                    bgcolor="rgba(255, 255, 255, 0.95)",
+                    bordercolor="gray",
+                    borderwidth=1,
+                    font=dict(size=10)
+                )
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+        with col2:
+            # Chain distribution pie chart
+            chain_dist = top_10_all['Display_Chain'].value_counts()
+
+            fig = px.pie(
+                values=chain_dist.values,
+                names=chain_dist.index,
+                title='Chain Distribution in Top 10',
+                hole=0.4,
+                color=chain_dist.index,
+                color_discrete_map={
+                    'OBA Supermarket': '#51cf66',
+                    'Bravo Supermarket': '#ffa94d',
+                    'Bazarstore': '#ff6b6b'
+                }
+            )
+            fig.update_traces(
+                textposition='inside',
+                textinfo='value+percent',
+                textfont=dict(size=12),
+                marker=dict(line=dict(color='white', width=2))
+            )
+            fig.update_layout(
+                height=400,
+                font=dict(size=11),
+                showlegend=True,
+                legend=dict(
+                    orientation="v",
+                    yanchor="middle",
+                    y=0.5,
+                    xanchor="right",
+                    x=1.3,
+                    font=dict(size=10)
+                )
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
         # Top 20 opportunities table
         st.markdown("---")
         st.subheader("Top 20 Retail Partnership Opportunities")
